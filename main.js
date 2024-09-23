@@ -92,9 +92,6 @@
         camera.updateProjectionMatrix();
     });
 
-    // Add orbit controls
-    // const controls = new THREE.OrbitControls(camera, renderer.domElement);
-
     // Add zoom functionality with a slider
     const zoomSlider = document.getElementById('zoomSlider');
     zoomSlider.addEventListener('input', function () {
