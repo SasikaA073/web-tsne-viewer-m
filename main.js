@@ -1,84 +1,102 @@
-// Create the scene and a camera to view it
-var scene = new THREE.Scene();
+// Create a scene
+const scene = new THREE.Scene();
 
-/**
-* Camera
-**/
+// Create a camera
+const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+camera.position.z = 75;
 
-// Specify the portion of the scene visiable at any time (in degrees)
-var fieldOfView = 75;
+// Create a renderer
+const renderer = new THREE.WebGLRenderer();
+renderer.setSize(window.innerWidth, window.innerHeight);
+document.body.appendChild(renderer.domElement);
 
-// Specify the camera's aspect ratio
-var aspectRatio = window.innerWidth / window.innerHeight;
+// Declare the imagePositions array to be populated from JSON
+let imagePositions = [];
+let spaceBetweenTiles = 60;
 
-// Specify the near and far clipping planes. Only objects
-// between those planes will be rendered in the scene
-// (these values help control the number of items rendered
-// at any given time)
-var nearPlane = 0.1;
-var farPlane = 1000;
+// Function to load an image
+function loadImage(src) {
+    return new Promise((resolve, reject) => {
+        const image = new Image();
+        image.src = src;
+        image.onload = () => resolve(image);
+        image.onerror = reject;
+    });
+}
 
-// Use the values specified above to create a camera
-var camera = new THREE.PerspectiveCamera(
-  fieldOfView, aspectRatio, nearPlane, farPlane
-);
+// Function to get 128x128px chunks from the image
+function getChunkedTexture(image, x, y, chunkSize = 128) {
+    // Create a canvas and draw the image chunk
+    const canvas = document.createElement('canvas');
+    canvas.width = chunkSize;
+    canvas.height = chunkSize;
+    const context = canvas.getContext('2d');
+    context.drawImage(image, x, y, chunkSize, chunkSize, 0, 0, chunkSize, chunkSize);
+    
+    // Create and return the texture
+    return new THREE.CanvasTexture(canvas);
+}
 
-// Finally, set the camera's position in the z-dimension
-camera.position.z = 5;
+// Function to create a plane and apply the texture
+function createPlane(texture, positionX, positionY) {
+    const geometry = new THREE.PlaneGeometry(2, 2); // Set appropriate size for the plane
+    const material = new THREE.MeshBasicMaterial({ map: texture });
+    const plane = new THREE.Mesh(geometry, material);
+    plane.position.set(positionX, positionY, 0);
+    scene.add(plane);
+}
 
-/**
-* Renderer
-**/
+// Load the image position JSON file
+let file_loader = new THREE.FileLoader();
+file_loader.load('atlas_images/coords.json', function(data) {
+    imagePositions = JSON.parse(data);
+    createAndRenderPlanes('atlas_images/atlas_1.jpg');
+});
 
-// Create the canvas with a renderer
-var renderer = new THREE.WebGLRenderer({antialias: true});
+// Function to create 300 planes and render 128x128px chunks onto them
+async function createAndRenderPlanes(imageSrc, planesPerRow = 20) {
+    const image = await loadImage(imageSrc);
+    const chunkSize = 128;
+    
+    for (let i = 0; i < 300; i++) {
+        const row = Math.floor(i / planesPerRow);
+        const col = i % planesPerRow;
+        const x = col * chunkSize;
+        const y = row * chunkSize;
 
-// Specify the size of the canvas
-renderer.setSize( window.innerWidth, window.innerHeight );
+        // Get the chunk texture from the image
+        const texture = getChunkedTexture(image, x, y);
 
-// Add the canvas to the DOM
-document.body.appendChild( renderer.domElement );
+        // Calculate position of each plane from the JSON file
+        const positionX = imagePositions[i].x*spaceBetweenTiles; // Assuming the JSON has 'x' and 'y'
+        const positionY = imagePositions[i].y*spaceBetweenTiles;
 
-/**
-* Cube
-**/
+        // Create and render the plane
+        createPlane(texture, positionX, positionY);
+    }
+}
 
-// Create a cube with width, height, and depth set to 1
-var geometry = new THREE.BoxGeometry( 1, 1, 1 );
-
-// Use a MeshPhongMaterial to catch the directed light
-var material = new THREE.MeshPhongMaterial({ color: 0xffff00 })
-
-// Combine the geometry and material into a mesh
-var cube = new THREE.Mesh( geometry, material );
-
-// Add the mesh to our scene
-scene.add( cube );
-
-/**
-* Lights
-**/
-
-// Add a point light with #fff color, .7 intensity, and 0 distance
-var light = new THREE.PointLight( 0xffffff, .7, 0 );
-
-// Specify the light's position
-light.position.set(1, 1, 100 );
-
-// Add the light to the scene
-scene.add(light)
-
-/**
-* Render!
-**/
-
-// The main animation function that re-renders the scene each animation frame
+// Render the scene
 function animate() {
-requestAnimationFrame( animate );
-  renderer.render( scene, camera );
-
-  // Rotate the cube a bit each animation frame
-  cube.rotation.y += 0.01;
-  cube.rotation.z += 0.01;
+    requestAnimationFrame(animate);
+    renderer.render(scene, camera);
 }
 animate();
+
+// Resize the renderer when the window is resized
+window.addEventListener('resize', function () {
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+});
+
+// Add orbit controls
+const controls = new THREE.OrbitControls(camera, renderer.domElement);
+
+// Add zoom functionality with a slider
+const zoomSlider = document.getElementById('zoomSlider');
+zoomSlider.addEventListener('input', function () {
+    const zoomValue = parseFloat(zoomSlider.value);
+    camera.zoom = zoomValue; // Update camera zoom based on slider value
+    camera.updateProjectionMatrix(); // Required after changing zoom
+});
