@@ -3,35 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TSNE viewer</title>
+    <title>TSNE viewer for Image Datasets</title>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/controls/OrbitControls.js"></script>
+
+	<!-- favicon icon https://cdn.sstatic.net/Sites/dsp/Img/apple-touch-icon@2.png?v=e0439310c223-->
+	<link rel="icon" href="https://cdn.sstatic.net/Sites/dsp/Img/apple-touch-icon@2.png?v=e0439310c223">
     <style>
         body {
             font-family: Arial, sans-serif;
-            
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
+            color: #f0f0f0;
             margin: 0;
-			/* font color #f0f0f0 */
-			color: #f0f0f0;
-            size: 100%;
-			background-color: #000;
-			overflow: hidden;
+            background-color: #000;
+            overflow: hidden;
         }
         .slider-container {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 10;
             display: flex;
-            flex-direction: row;
-            align-items: center;
-            margin: 20px 0;
+            flex-direction: column;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            border-radius: 5px;
         }
         .slider {
             display: flex;
             align-items: center;
             width: 300px;
             margin: 10px 0;
+
         }
         .slider input[type="range"] {
             -webkit-appearance: none;
@@ -52,28 +55,48 @@
             width: 20px;
             height: 20px;
             border-radius: 50%;
-            background: #4CAF50;
+            background: #00becd;
             cursor: pointer;
         }
         .slider input[type="range"]::-moz-range-thumb {
             width: 20px;
             height: 20px;
             border-radius: 50%;
-            background: #4CAF50;
+            background: #00becd;
             cursor: pointer;
         }
         .slider svg {
-            width: 24px;
-            height: 24px;
+            width: 36px;
+            height: 36px;
             margin-right: 10px;
         }
+        .footer {
+			
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            z-index: 10;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 1.2rem;
+        }
+		.footer a {
+			color: #00becd;
+			text-decoration: none;
+		}
+
+		.footer a:hover {
+			text-decoration: underline;
+			color: #11e0ef;
+		}
     </style>
 </head>
 <body>
     <script type="module" src="main.js"></script>
-
-		
+    
     <div class="slider-container">
+		<h2>Mapping Image Datasets by Visual<br> Similarity Using Machine Learning</h2>
         <label class="slider">
             <svg viewBox="0 0 24 24" width="24" height="24">
                 <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" fill="currentColor"></path>
@@ -81,7 +104,7 @@
             <input type="range" id="zoomSlider" min="1" max="10" step="1" value="1">
             <span>Camera Zoom</span>
         </label>
-
+        
         <label class="slider">
             <svg viewBox="0 0 24 24" width="24" height="24">
                 <path d="M3 15v4c0 1.1.9 2 2 2h4v-2H5v-4H3zm2-9H3v4h2V6zm14 9h-2v4h-4v2h4c1.1 0 2-.9 2-2v-4zm0-11h-4v2h4v4h2V6c0-1.1-.9-2-2-2z" fill="currentColor"></path>
@@ -89,6 +112,17 @@
             <input type="range" id="spaceBetweenTilesSlider" min="0.1" max="1" step="0.05" value="0.5">
             <span>Space Between Tiles</span>
         </label>
+    </div>
+
+    <div class="footer">
+
+		More feature embeddings coming soon!
+		<br>
+        Developed by <a href="https://sasikaa073.github.io/">Sasika Amarasinghe</a>
+		<br>
+		Inspired by <a href="https://artsexperiments.withgoogle.com/tsnemap/"> Google Arts Experiments TSNE viewer</a>
+
+		
     </div>
 </body>
 </html>
