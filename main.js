@@ -5,7 +5,7 @@ const scene = new THREE.Scene();
 
 // Create a camera
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-camera.position.z = 75;
+camera.position.z = 25;
 
 // Create a renderer
 const renderer = new THREE.WebGLRenderer();
@@ -14,7 +14,7 @@ document.body.appendChild(renderer.domElement);
 
 // Declare the imagePositions array to be populated from JSON
 let imagePositions = [];
-let spaceBetweenTiles = 60;
+let spaceBetweenTiles = 0.5;
 
 // Function to load an image
 function loadImage(src) {
@@ -50,7 +50,7 @@ function createPlane(texture, positionX, positionY) {
 
 // Load the image position JSON file
 let file_loader = new THREE.FileLoader();
-file_loader.load('atlas_images/coords.json', function(data) {
+file_loader.load('atlas_images/color_coords.json', function(data) {
     imagePositions = JSON.parse(data);
     createAndRenderPlanes('atlas_images/atlas_1.jpg');
 });
