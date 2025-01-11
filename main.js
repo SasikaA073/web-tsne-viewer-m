@@ -1,6 +1,47 @@
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 camera.position.z = 25;
+camera.position.x = 4;
+camera.position.y = -25;
+
+// Camera Controller
+const cameraController = {
+    x: camera.position.x,
+    y: camera.position.y,
+    z: camera.position.z,
+};
+
+function updateCameraPosition() {
+    camera.position.set(
+        parseFloat(cameraController.x),
+        parseFloat(cameraController.y),
+        parseFloat(cameraController.z)
+    );
+    camera.lookAt(0, 0, 0); // Ensure the camera points to the center of the scene
+    camera.updateProjectionMatrix();
+    needsUpdate = true;
+}
+
+// Event Listeners for Camera Control Inputs
+const cameraXSlider = document.getElementById('cameraXSlider');
+const cameraYSlider = document.getElementById('cameraYSlider');
+const cameraZSlider = document.getElementById('cameraZSlider');
+
+cameraXSlider.addEventListener('input', function () {
+    cameraController.x = cameraXSlider.value;
+    updateCameraPosition();
+});
+
+cameraYSlider.addEventListener('input', function () {
+    cameraController.y = cameraYSlider.value;
+    updateCameraPosition();
+});
+
+cameraZSlider.addEventListener('input', function () {
+    cameraController.z = cameraZSlider.value;
+    updateCameraPosition();
+});
+
 
 const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
@@ -9,6 +50,8 @@ document.body.appendChild(renderer.domElement);
 let imagePositions = [];
 let spaceBetweenTiles = 0.1;
 let needsUpdate = true;
+let showAxis = true; // Variable to control whether axes are displayed
+let axesHelper; // To store the axes helper
 
 function loadImage(src) {
     return new Promise((resolve, reject) => {
@@ -61,6 +104,7 @@ async function createAndRenderPlanes(imageSrc, planesPerRow = 20) {
         createPlane(texture, positionX, positionY);
     }
     needsUpdate = true;
+    updateAxesHelper(); // Update axes helper when planes are added
 }
 
 function updatePlanePositions() {
@@ -77,6 +121,22 @@ function updatePlanePositions() {
 function updateSpaceBetweenTiles() {
     spaceBetweenTiles = parseFloat(spaceBetweenTilesSlider.value);
     updatePlanePositions();
+}
+
+// Function to add or remove the axes helper based on showAxis
+function updateAxesHelper() {
+    if (showAxis) {
+        if (!axesHelper) {
+            axesHelper = new THREE.AxesHelper(5); // Length of the axes
+            scene.add(axesHelper);
+        }
+    } else {
+        if (axesHelper) {
+            scene.remove(axesHelper);
+            axesHelper = null;
+        }
+    }
+    needsUpdate = true;
 }
 
 function animate() {
@@ -105,3 +165,10 @@ zoomSlider.addEventListener('input', function () {
 
 const spaceBetweenTilesSlider = document.getElementById('spaceBetweenTilesSlider');
 spaceBetweenTilesSlider.addEventListener('input', updateSpaceBetweenTiles);
+
+// Toggle axes visibility
+const toggleAxesCheckbox = document.getElementById('toggleAxesCheckbox');
+toggleAxesCheckbox.addEventListener('change', function () {
+    showAxis = toggleAxesCheckbox.checked;
+    updateAxesHelper();
+});

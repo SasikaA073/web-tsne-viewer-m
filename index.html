@@ -19,57 +19,80 @@
             overflow: hidden;
         }
         .slider-container {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            z-index: 10;
-            display: flex;
-            flex-direction: column;
-            background-color: rgba(0, 0, 0, 0.7);
-            padding: 10px;
-            border-radius: 5px;
-        }
-        .slider {
-            display: flex;
-            align-items: center;
-            width: 300px;
-            margin: 10px 0;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 5px;
+}
 
-        }
-        .slider input[type="range"] {
-            -webkit-appearance: none;
-            width: 100%;
-            height: 10px;
-            border-radius: 5px;
-            background: #d3d3d3;
-            outline: none;
-            opacity: 0.7;
-            transition: opacity .2s;
-        }
-        .slider input[type="range"]:hover {
-            opacity: 1;
-        }
-        .slider input[type="range"]::-webkit-slider-thumb {
-            -webkit-appearance: none;
-            appearance: none;
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background: #00becd;
-            cursor: pointer;
-        }
-        .slider input[type="range"]::-moz-range-thumb {
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background: #00becd;
-            cursor: pointer;
-        }
-        .slider svg {
-            width: 36px;
-            height: 36px;
-            margin-right: 10px;
-        }
+.slider {
+    display: flex;
+    align-items: center;
+    width: 250px; /* Reduced width */
+    margin: 8px 0; /* Reduced vertical margin */
+}
+
+.slider input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 8px; /* Reduced height */
+    border-radius: 4px; /* Slightly smaller corners */
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.slider input[type="range"]:hover {
+    opacity: 1;
+}
+
+.slider input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px; /* Smaller thumb */
+    height: 16px;
+    border-radius: 50%;
+    background: #00becd;
+    cursor: pointer;
+}
+
+.slider input[type="range"]::-moz-range-thumb {
+    width: 16px; /* Smaller thumb */
+    height: 16px;
+    border-radius: 50%;
+    background: #00becd;
+    cursor: pointer;
+}
+
+.slider svg {
+    width: 24px; /* Reduced icon size */
+    height: 24px;
+    margin-right: 8px; /* Reduced spacing */
+}
+
+.slider span {
+    font-size: 0.85rem; /* Reduced text size */
+    margin-left: 8px; /* Reduced spacing */
+}
+
+label {
+    font-size: 0.85rem; /* Reduced font size for labels */
+    display: flex;
+    align-items: center;
+}
+
+label input[type="checkbox"] {
+    width: 16px; /* Reduced checkbox size */
+    height: 16px;
+    margin-right: 6px; /* Reduced spacing */
+}
+
         .footer {
 			
             position: absolute;
@@ -79,7 +102,7 @@
             background-color: rgba(0, 0, 0, 0.7);
             padding: 5px 10px;
             border-radius: 5px;
-            font-size: 1.2rem;
+            font-size: 0.6rem;
         }
 		.footer a {
 			color: #00becd;
@@ -97,6 +120,44 @@
     
     <div class="slider-container">
 		<h2>Mapping Image Datasets by Visual<br> Similarity Using Machine Learning</h2>
+
+        <!-- camera position -->
+        <!-- Camera Controls -->
+<div class="slider">
+    <svg viewBox="0 0 24 24" width="24" height="24">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" fill="currentColor"></path>
+    </svg>
+    <input type="range" id="cameraXSlider" min="-50" max="50" step="0.1" value="0">
+    <span>Camera X</span>
+</div>
+
+<div class="slider">
+    <svg viewBox="0 0 24 24" width="24" height="24">
+        <path d="M19 13H5v-2h14v2z" fill="currentColor"></path>
+    </svg>
+    <input type="range" id="cameraYSlider" min="-50" max="50" step="0.1" value="0">
+    <span>Camera Y</span>
+</div>
+
+<div class="slider">
+    <svg viewBox="0 0 24 24" width="24" height="24">
+        <path d="M12 4c4.41 0 8 3.59 8 8s-3.59 8-8 8-8-3.59-8-8 3.59-8 8-8zm0-2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" fill="currentColor"></path>
+    </svg>
+    <input type="range" id="cameraZSlider" min="0" max="100" step="0.1" value="25">
+    <span>Camera Z</span>
+</div>
+
+<div class="slider" style="align-items: center;">
+    <svg viewBox="0 0 24 24" width="24" height="24">
+        <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" fill="currentColor"></path>
+    </svg>
+    <label for="toggleAxesCheckbox" style="display: flex; align-items: center; margin-left: 10px;">
+        <input type="checkbox" id="toggleAxesCheckbox" style="margin-right: 8px;"> Show Axes
+    </label>
+</div>
+
+        
+
         <label class="slider">
             <svg viewBox="0 0 24 24" width="24" height="24">
                 <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" fill="currentColor"></path>
