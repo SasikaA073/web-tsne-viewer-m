@@ -128,9 +128,9 @@ def run_inference_on_images(image_list, output_dir):
             results = classifier.classify_image(image)
             image_to_labels[image] = results
 
-            print("Top 5 predictions:")
-            for result in results:
-                print(f"  {result['label']} (score = {result['score']})")
+            # print("Top 5 predictions:")
+            # for result in results:
+            #     print(f"  {result['label']} (score = {result['score']})")
 
             # Get and save feature vector
             feature_vector = classifier.get_feature_vector(image)

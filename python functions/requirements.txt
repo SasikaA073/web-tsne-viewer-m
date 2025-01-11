@@ -1,4 +1,4 @@
-psutil
-numpy
-torch
-torchvision 
+psutil==6.1.1
+numpy==2.2.1
+torch==2.5.1
+torchvision==0.20.1

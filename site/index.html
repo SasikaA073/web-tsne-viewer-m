@@ -6,7 +6,9 @@
     <title>TSNE viewer for Image Datasets</title>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/controls/OrbitControls.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/controls/OrbitControls.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
 
 	<!-- favicon icon https://cdn.sstatic.net/Sites/dsp/Img/apple-touch-icon@2.png?v=e0439310c223-->
 	<link rel="icon" href="https://cdn.sstatic.net/Sites/dsp/Img/apple-touch-icon@2.png?v=e0439310c223">
@@ -81,6 +83,22 @@
     margin-left: 8px; /* Reduced spacing */
 }
 
+.mode-toggle {
+    background-color: #00becd;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: background-color 0.2s;
+    margin-left: 8px;
+}
+
+.mode-toggle:hover {
+    background-color: #11e0ef;
+}
+
 label {
     font-size: 0.85rem; /* Reduced font size for labels */
     display: flex;
@@ -120,6 +138,15 @@ label input[type="checkbox"] {
     
     <div class="slider-container">
 		<h2>Mapping Image Datasets by Visual<br> Similarity Using Machine Learning</h2>
+
+
+        <div class="slider">
+            <svg viewBox="0 0 24 24" width="24" height="24">
+                <path d="M19 12h-2v3h-3v2h5v-5zM7 9h3V7H5v5h2V9zm14-6H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16.01H3V4.99h18v14.02z" fill="currentColor"></path>
+            </svg>
+            <button id="toggle2D3DButton" class="mode-toggle">Switch to 2D</button>
+        </div>
+
 
         <!-- camera position -->
         <!-- Camera Controls -->
