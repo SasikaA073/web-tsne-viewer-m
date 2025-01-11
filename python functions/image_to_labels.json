@@ -1,1 +1,6602 @@
-{}
+{
+  "Output_test_images/test_images_center_cropped/1.jpg": [
+    {
+      "label": "fountain",
+      "score": "0.4105"
+    },
+    {
+      "label": "geyser",
+      "score": "0.0932"
+    },
+    {
+      "label": "valley",
+      "score": "0.0303"
+    },
+    {
+      "label": "book_jacket",
+      "score": "0.0152"
+    },
+    {
+      "label": "caldron",
+      "score": "0.0151"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/10.jpg": [
+    {
+      "label": "valley",
+      "score": "0.3068"
+    },
+    {
+      "label": "alp",
+      "score": "0.2426"
+    },
+    {
+      "label": "volcano",
+      "score": "0.0721"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0214"
+    },
+    {
+      "label": "sandbar",
+      "score": "0.0140"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/100.jpg": [
+    {
+      "label": "lakeside",
+      "score": "0.6240"
+    },
+    {
+      "label": "seashore",
+      "score": "0.0776"
+    },
+    {
+      "label": "promontory",
+      "score": "0.0331"
+    },
+    {
+      "label": "valley",
+      "score": "0.0252"
+    },
+    {
+      "label": "golf_ball",
+      "score": "0.0151"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/101.jpg": [
+    {
+      "label": "geyser",
+      "score": "0.6565"
+    },
+    {
+      "label": "volcano",
+      "score": "0.0802"
+    },
+    {
+      "label": "alp",
+      "score": "0.0243"
+    },
+    {
+      "label": "valley",
+      "score": "0.0120"
+    },
+    {
+      "label": "megalith",
+      "score": "0.0057"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/102.jpg": [
+    {
+      "label": "ptarmigan",
+      "score": "0.3589"
+    },
+    {
+      "label": "black_grouse",
+      "score": "0.2253"
+    },
+    {
+      "label": "water_ouzel",
+      "score": "0.0310"
+    },
+    {
+      "label": "brambling",
+      "score": "0.0286"
+    },
+    {
+      "label": "prairie_chicken",
+      "score": "0.0279"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/103.jpg": [
+    {
+      "label": "volcano",
+      "score": "0.9646"
+    },
+    {
+      "label": "alp",
+      "score": "0.0151"
+    },
+    {
+      "label": "promontory",
+      "score": "0.0020"
+    },
+    {
+      "label": "geyser",
+      "score": "0.0011"
+    },
+    {
+      "label": "valley",
+      "score": "0.0010"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/104.jpg": [
+    {
+      "label": "volcano",
+      "score": "0.5162"
+    },
+    {
+      "label": "geyser",
+      "score": "0.3222"
+    },
+    {
+      "label": "seashore",
+      "score": "0.0068"
+    },
+    {
+      "label": "promontory",
+      "score": "0.0044"
+    },
+    {
+      "label": "valley",
+      "score": "0.0034"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/105.jpg": [
+    {
+      "label": "thatch",
+      "score": "0.0884"
+    },
+    {
+      "label": "broom",
+      "score": "0.0274"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0251"
+    },
+    {
+      "label": "seashore",
+      "score": "0.0248"
+    },
+    {
+      "label": "cliff",
+      "score": "0.0243"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/106.jpg": [
+    {
+      "label": "valley",
+      "score": "0.3817"
+    },
+    {
+      "label": "alp",
+      "score": "0.2443"
+    },
+    {
+      "label": "mountain_tent",
+      "score": "0.0283"
+    },
+    {
+      "label": "monastery",
+      "score": "0.0184"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0116"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/107.jpg": [
+    {
+      "label": "geyser",
+      "score": "0.7730"
+    },
+    {
+      "label": "volcano",
+      "score": "0.1256"
+    },
+    {
+      "label": "fountain",
+      "score": "0.0065"
+    },
+    {
+      "label": "alp",
+      "score": "0.0064"
+    },
+    {
+      "label": "ski",
+      "score": "0.0031"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/108.jpg": [
+    {
+      "label": "valley",
+      "score": "0.3340"
+    },
+    {
+      "label": "alp",
+      "score": "0.1917"
+    },
+    {
+      "label": "volcano",
+      "score": "0.1654"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0193"
+    },
+    {
+      "label": "sandbar",
+      "score": "0.0182"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/109.jpg": [
+    {
+      "label": "velvet",
+      "score": "0.3826"
+    },
+    {
+      "label": "prayer_rug",
+      "score": "0.3154"
+    },
+    {
+      "label": "valley",
+      "score": "0.0188"
+    },
+    {
+      "label": "wool",
+      "score": "0.0185"
+    },
+    {
+      "label": "quilt",
+      "score": "0.0158"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/11.jpg": [
+    {
+      "label": "castle",
+      "score": "0.3249"
+    },
+    {
+      "label": "monastery",
+      "score": "0.1280"
+    },
+    {
+      "label": "valley",
+      "score": "0.0675"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0241"
+    },
+    {
+      "label": "viaduct",
+      "score": "0.0118"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/110.jpg": [
+    {
+      "label": "horned_viper",
+      "score": "0.2933"
+    },
+    {
+      "label": "sea_snake",
+      "score": "0.1728"
+    },
+    {
+      "label": "sidewinder",
+      "score": "0.1502"
+    },
+    {
+      "label": "coral_reef",
+      "score": "0.0609"
+    },
+    {
+      "label": "hognose_snake",
+      "score": "0.0357"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/111.jpg": [
+    {
+      "label": "alp",
+      "score": "0.6303"
+    },
+    {
+      "label": "valley",
+      "score": "0.1190"
+    },
+    {
+      "label": "volcano",
+      "score": "0.0324"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0160"
+    },
+    {
+      "label": "geyser",
+      "score": "0.0109"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/112.jpg": [
+    {
+      "label": "platypus",
+      "score": "0.3135"
+    },
+    {
+      "label": "common_newt",
+      "score": "0.2421"
+    },
+    {
+      "label": "tailed_frog",
+      "score": "0.1117"
+    },
+    {
+      "label": "African_chameleon",
+      "score": "0.0316"
+    },
+    {
+      "label": "axolotl",
+      "score": "0.0179"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/113.jpg": [
+    {
+      "label": "valley",
+      "score": "0.4496"
+    },
+    {
+      "label": "volcano",
+      "score": "0.2697"
+    },
+    {
+      "label": "alp",
+      "score": "0.1238"
+    },
+    {
+      "label": "sandbar",
+      "score": "0.0242"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0200"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/114.jpg": [
+    {
+      "label": "valley",
+      "score": "0.5443"
+    },
+    {
+      "label": "alp",
+      "score": "0.1825"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0978"
+    },
+    {
+      "label": "cliff",
+      "score": "0.0175"
+    },
+    {
+      "label": "monastery",
+      "score": "0.0166"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/115.jpg": [
+    {
+      "label": "volcano",
+      "score": "0.8092"
+    },
+    {
+      "label": "alp",
+      "score": "0.0100"
+    },
+    {
+      "label": "promontory",
+      "score": "0.0072"
+    },
+    {
+      "label": "valley",
+      "score": "0.0049"
+    },
+    {
+      "label": "geyser",
+      "score": "0.0038"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/116.jpg": [
+    {
+      "label": "promontory",
+      "score": "0.4375"
+    },
+    {
+      "label": "seashore",
+      "score": "0.1487"
+    },
+    {
+      "label": "alp",
+      "score": "0.0692"
+    },
+    {
+      "label": "cliff",
+      "score": "0.0414"
+    },
+    {
+      "label": "valley",
+      "score": "0.0302"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/117.jpg": [
+    {
+      "label": "valley",
+      "score": "0.2145"
+    },
+    {
+      "label": "fountain",
+      "score": "0.1977"
+    },
+    {
+      "label": "dam",
+      "score": "0.1429"
+    },
+    {
+      "label": "geyser",
+      "score": "0.0537"
+    },
+    {
+      "label": "cliff",
+      "score": "0.0324"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/118.jpg": [
+    {
+      "label": "seashore",
+      "score": "0.6977"
+    },
+    {
+      "label": "promontory",
+      "score": "0.1581"
+    },
+    {
+      "label": "sandbar",
+      "score": "0.0243"
+    },
+    {
+      "label": "coral_reef",
+      "score": "0.0024"
+    },
+    {
+      "label": "beacon",
+      "score": "0.0022"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/119.jpg": [
+    {
+      "label": "alp",
+      "score": "0.3805"
+    },
+    {
+      "label": "valley",
+      "score": "0.2932"
+    },
+    {
+      "label": "promontory",
+      "score": "0.0392"
+    },
+    {
+      "label": "cliff",
+      "score": "0.0186"
+    },
+    {
+      "label": "geyser",
+      "score": "0.0148"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/12.jpg": [
+    {
+      "label": "geyser",
+      "score": "0.2475"
+    },
+    {
+      "label": "valley",
+      "score": "0.0831"
+    },
+    {
+      "label": "cliff",
+      "score": "0.0423"
+    },
+    {
+      "label": "fountain",
+      "score": "0.0360"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0331"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/120.jpg": [
+    {
+      "label": "geyser",
+      "score": "0.6651"
+    },
+    {
+      "label": "volcano",
+      "score": "0.0370"
+    },
+    {
+      "label": "cliff",
+      "score": "0.0099"
+    },
+    {
+      "label": "castle",
+      "score": "0.0098"
+    },
+    {
+      "label": "beacon",
+      "score": "0.0092"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/121.jpg": [
+    {
+      "label": "valley",
+      "score": "0.5229"
+    },
+    {
+      "label": "cliff",
+      "score": "0.1120"
+    },
+    {
+      "label": "promontory",
+      "score": "0.0744"
+    },
+    {
+      "label": "alp",
+      "score": "0.0513"
+    },
+    {
+      "label": "volcano",
+      "score": "0.0405"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/122.jpg": [
+    {
+      "label": "alp",
+      "score": "0.2017"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.2016"
+    },
+    {
+      "label": "valley",
+      "score": "0.0864"
+    },
+    {
+      "label": "promontory",
+      "score": "0.0541"
+    },
+    {
+      "label": "cliff",
+      "score": "0.0322"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/123.jpg": [
+    {
+      "label": "alp",
+      "score": "0.2787"
+    },
+    {
+      "label": "boathouse",
+      "score": "0.1243"
+    },
+    {
+      "label": "thatch",
+      "score": "0.0941"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0826"
+    },
+    {
+      "label": "barn",
+      "score": "0.0638"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/124.jpg": [
+    {
+      "label": "volcano",
+      "score": "0.3721"
+    },
+    {
+      "label": "alp",
+      "score": "0.2050"
+    },
+    {
+      "label": "valley",
+      "score": "0.1088"
+    },
+    {
+      "label": "promontory",
+      "score": "0.0270"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0148"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/125.jpg": [
+    {
+      "label": "alp",
+      "score": "0.5016"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.1879"
+    },
+    {
+      "label": "valley",
+      "score": "0.1364"
+    },
+    {
+      "label": "seashore",
+      "score": "0.0191"
+    },
+    {
+      "label": "promontory",
+      "score": "0.0085"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/126.jpg": [
+    {
+      "label": "otterhound",
+      "score": "0.1464"
+    },
+    {
+      "label": "komondor",
+      "score": "0.0810"
+    },
+    {
+      "label": "Irish_water_spaniel",
+      "score": "0.0804"
+    },
+    {
+      "label": "Lakeland_terrier",
+      "score": "0.0489"
+    },
+    {
+      "label": "lynx",
+      "score": "0.0470"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/127.jpg": [
+    {
+      "label": "alp",
+      "score": "0.8689"
+    },
+    {
+      "label": "valley",
+      "score": "0.0435"
+    },
+    {
+      "label": "volcano",
+      "score": "0.0097"
+    },
+    {
+      "label": "mountain_tent",
+      "score": "0.0051"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0036"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/128.jpg": [
+    {
+      "label": "worm_fence",
+      "score": "0.2792"
+    },
+    {
+      "label": "valley",
+      "score": "0.2428"
+    },
+    {
+      "label": "stone_wall",
+      "score": "0.0546"
+    },
+    {
+      "label": "viaduct",
+      "score": "0.0189"
+    },
+    {
+      "label": "chain_mail",
+      "score": "0.0126"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/129.jpg": [
+    {
+      "label": "geyser",
+      "score": "0.7763"
+    },
+    {
+      "label": "cliff",
+      "score": "0.0308"
+    },
+    {
+      "label": "valley",
+      "score": "0.0264"
+    },
+    {
+      "label": "volcano",
+      "score": "0.0196"
+    },
+    {
+      "label": "promontory",
+      "score": "0.0123"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/13.jpg": [
+    {
+      "label": "velvet",
+      "score": "0.3853"
+    },
+    {
+      "label": "prayer_rug",
+      "score": "0.0713"
+    },
+    {
+      "label": "wool",
+      "score": "0.0554"
+    },
+    {
+      "label": "valley",
+      "score": "0.0547"
+    },
+    {
+      "label": "coral_reef",
+      "score": "0.0218"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/130.jpg": [
+    {
+      "label": "valley",
+      "score": "0.4679"
+    },
+    {
+      "label": "volcano",
+      "score": "0.2426"
+    },
+    {
+      "label": "alp",
+      "score": "0.0582"
+    },
+    {
+      "label": "coral_reef",
+      "score": "0.0144"
+    },
+    {
+      "label": "promontory",
+      "score": "0.0131"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/131.jpg": [
+    {
+      "label": "lakeside",
+      "score": "0.6326"
+    },
+    {
+      "label": "promontory",
+      "score": "0.1024"
+    },
+    {
+      "label": "dam",
+      "score": "0.0773"
+    },
+    {
+      "label": "valley",
+      "score": "0.0720"
+    },
+    {
+      "label": "seashore",
+      "score": "0.0262"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/132.jpg": [
+    {
+      "label": "promontory",
+      "score": "0.7862"
+    },
+    {
+      "label": "seashore",
+      "score": "0.0445"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0366"
+    },
+    {
+      "label": "cliff",
+      "score": "0.0122"
+    },
+    {
+      "label": "castle",
+      "score": "0.0077"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/133.jpg": [
+    {
+      "label": "promontory",
+      "score": "0.5373"
+    },
+    {
+      "label": "seashore",
+      "score": "0.1424"
+    },
+    {
+      "label": "cliff",
+      "score": "0.0756"
+    },
+    {
+      "label": "volcano",
+      "score": "0.0167"
+    },
+    {
+      "label": "beacon",
+      "score": "0.0124"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/134.jpg": [
+    {
+      "label": "geyser",
+      "score": "0.7714"
+    },
+    {
+      "label": "seashore",
+      "score": "0.0553"
+    },
+    {
+      "label": "volcano",
+      "score": "0.0244"
+    },
+    {
+      "label": "promontory",
+      "score": "0.0071"
+    },
+    {
+      "label": "valley",
+      "score": "0.0058"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/135.jpg": [
+    {
+      "label": "canoe",
+      "score": "0.1346"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.1125"
+    },
+    {
+      "label": "yawl",
+      "score": "0.0927"
+    },
+    {
+      "label": "suspension_bridge",
+      "score": "0.0482"
+    },
+    {
+      "label": "boathouse",
+      "score": "0.0377"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/136.jpg": [
+    {
+      "label": "valley",
+      "score": "0.5818"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.1780"
+    },
+    {
+      "label": "alp",
+      "score": "0.1212"
+    },
+    {
+      "label": "seashore",
+      "score": "0.0186"
+    },
+    {
+      "label": "promontory",
+      "score": "0.0078"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/137.jpg": [
+    {
+      "label": "snowmobile",
+      "score": "0.8128"
+    },
+    {
+      "label": "black_grouse",
+      "score": "0.1168"
+    },
+    {
+      "label": "alp",
+      "score": "0.0153"
+    },
+    {
+      "label": "ski",
+      "score": "0.0078"
+    },
+    {
+      "label": "prairie_chicken",
+      "score": "0.0049"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/138.jpg": [
+    {
+      "label": "barn",
+      "score": "0.3843"
+    },
+    {
+      "label": "alp",
+      "score": "0.3632"
+    },
+    {
+      "label": "valley",
+      "score": "0.0088"
+    },
+    {
+      "label": "church",
+      "score": "0.0085"
+    },
+    {
+      "label": "boathouse",
+      "score": "0.0062"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/139.jpg": [
+    {
+      "label": "mobile_home",
+      "score": "0.2305"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.1588"
+    },
+    {
+      "label": "steam_locomotive",
+      "score": "0.0919"
+    },
+    {
+      "label": "passenger_car",
+      "score": "0.0714"
+    },
+    {
+      "label": "valley",
+      "score": "0.0388"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/14.jpg": [
+    {
+      "label": "valley",
+      "score": "0.2466"
+    },
+    {
+      "label": "promontory",
+      "score": "0.2234"
+    },
+    {
+      "label": "seashore",
+      "score": "0.1508"
+    },
+    {
+      "label": "volcano",
+      "score": "0.1445"
+    },
+    {
+      "label": "cliff",
+      "score": "0.0227"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/140.jpg": [
+    {
+      "label": "loggerhead",
+      "score": "0.2790"
+    },
+    {
+      "label": "leatherback_turtle",
+      "score": "0.1872"
+    },
+    {
+      "label": "mud_turtle",
+      "score": "0.1394"
+    },
+    {
+      "label": "terrapin",
+      "score": "0.1046"
+    },
+    {
+      "label": "pickelhaube",
+      "score": "0.0158"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/141.jpg": [
+    {
+      "label": "alp",
+      "score": "0.4348"
+    },
+    {
+      "label": "valley",
+      "score": "0.4304"
+    },
+    {
+      "label": "promontory",
+      "score": "0.0186"
+    },
+    {
+      "label": "volcano",
+      "score": "0.0094"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0074"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/142.jpg": [
+    {
+      "label": "promontory",
+      "score": "0.4834"
+    },
+    {
+      "label": "seashore",
+      "score": "0.3016"
+    },
+    {
+      "label": "cliff",
+      "score": "0.0567"
+    },
+    {
+      "label": "breakwater",
+      "score": "0.0067"
+    },
+    {
+      "label": "beacon",
+      "score": "0.0066"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/143.jpg": [
+    {
+      "label": "gazelle",
+      "score": "0.3681"
+    },
+    {
+      "label": "Italian_greyhound",
+      "score": "0.1179"
+    },
+    {
+      "label": "cheetah",
+      "score": "0.0414"
+    },
+    {
+      "label": "dingo",
+      "score": "0.0411"
+    },
+    {
+      "label": "dhole",
+      "score": "0.0337"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/144.jpg": [
+    {
+      "label": "valley",
+      "score": "0.6838"
+    },
+    {
+      "label": "alp",
+      "score": "0.1688"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0413"
+    },
+    {
+      "label": "boathouse",
+      "score": "0.0102"
+    },
+    {
+      "label": "castle",
+      "score": "0.0043"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/145.jpg": [
+    {
+      "label": "volcano",
+      "score": "0.9217"
+    },
+    {
+      "label": "valley",
+      "score": "0.0287"
+    },
+    {
+      "label": "promontory",
+      "score": "0.0127"
+    },
+    {
+      "label": "alp",
+      "score": "0.0063"
+    },
+    {
+      "label": "seashore",
+      "score": "0.0025"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/146.jpg": [
+    {
+      "label": "dam",
+      "score": "0.0510"
+    },
+    {
+      "label": "suspension_bridge",
+      "score": "0.0321"
+    },
+    {
+      "label": "fireboat",
+      "score": "0.0270"
+    },
+    {
+      "label": "volcano",
+      "score": "0.0229"
+    },
+    {
+      "label": "steel_arch_bridge",
+      "score": "0.0228"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/147.jpg": [
+    {
+      "label": "marmot",
+      "score": "0.1426"
+    },
+    {
+      "label": "ram",
+      "score": "0.1019"
+    },
+    {
+      "label": "llama",
+      "score": "0.0650"
+    },
+    {
+      "label": "wallaby",
+      "score": "0.0364"
+    },
+    {
+      "label": "meerkat",
+      "score": "0.0352"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/148.jpg": [
+    {
+      "label": "alp",
+      "score": "0.3877"
+    },
+    {
+      "label": "valley",
+      "score": "0.2121"
+    },
+    {
+      "label": "cliff",
+      "score": "0.0638"
+    },
+    {
+      "label": "canoe",
+      "score": "0.0471"
+    },
+    {
+      "label": "promontory",
+      "score": "0.0234"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/149.jpg": [
+    {
+      "label": "volcano",
+      "score": "0.6935"
+    },
+    {
+      "label": "alp",
+      "score": "0.0294"
+    },
+    {
+      "label": "geyser",
+      "score": "0.0243"
+    },
+    {
+      "label": "valley",
+      "score": "0.0102"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0073"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/15.jpg": [
+    {
+      "label": "promontory",
+      "score": "0.2798"
+    },
+    {
+      "label": "seashore",
+      "score": "0.2204"
+    },
+    {
+      "label": "alp",
+      "score": "0.1071"
+    },
+    {
+      "label": "valley",
+      "score": "0.0885"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0247"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/150.jpg": [
+    {
+      "label": "alp",
+      "score": "0.6460"
+    },
+    {
+      "label": "valley",
+      "score": "0.2497"
+    },
+    {
+      "label": "cliff",
+      "score": "0.0191"
+    },
+    {
+      "label": "mountain_tent",
+      "score": "0.0036"
+    },
+    {
+      "label": "ibex",
+      "score": "0.0024"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/151.jpg": [
+    {
+      "label": "promontory",
+      "score": "0.5245"
+    },
+    {
+      "label": "cliff",
+      "score": "0.1146"
+    },
+    {
+      "label": "valley",
+      "score": "0.1047"
+    },
+    {
+      "label": "seashore",
+      "score": "0.0709"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0307"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/152.jpg": [
+    {
+      "label": "ptarmigan",
+      "score": "0.1535"
+    },
+    {
+      "label": "hare",
+      "score": "0.0557"
+    },
+    {
+      "label": "golf_ball",
+      "score": "0.0555"
+    },
+    {
+      "label": "prairie_chicken",
+      "score": "0.0386"
+    },
+    {
+      "label": "black_grouse",
+      "score": "0.0353"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/153.jpg": [
+    {
+      "label": "lakeside",
+      "score": "0.3802"
+    },
+    {
+      "label": "valley",
+      "score": "0.2727"
+    },
+    {
+      "label": "promontory",
+      "score": "0.0956"
+    },
+    {
+      "label": "seashore",
+      "score": "0.0387"
+    },
+    {
+      "label": "dam",
+      "score": "0.0368"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/154.jpg": [
+    {
+      "label": "volcano",
+      "score": "0.8492"
+    },
+    {
+      "label": "alp",
+      "score": "0.0477"
+    },
+    {
+      "label": "valley",
+      "score": "0.0146"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0027"
+    },
+    {
+      "label": "promontory",
+      "score": "0.0019"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/155.jpg": [
+    {
+      "label": "Sussex_spaniel",
+      "score": "0.3866"
+    },
+    {
+      "label": "brown_bear",
+      "score": "0.1383"
+    },
+    {
+      "label": "Irish_water_spaniel",
+      "score": "0.0444"
+    },
+    {
+      "label": "miniature_poodle",
+      "score": "0.0440"
+    },
+    {
+      "label": "Norwich_terrier",
+      "score": "0.0242"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/156.jpg": [
+    {
+      "label": "valley",
+      "score": "0.7512"
+    },
+    {
+      "label": "alp",
+      "score": "0.1074"
+    },
+    {
+      "label": "promontory",
+      "score": "0.0280"
+    },
+    {
+      "label": "volcano",
+      "score": "0.0247"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0096"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/157.jpg": [
+    {
+      "label": "valley",
+      "score": "0.2323"
+    },
+    {
+      "label": "castle",
+      "score": "0.1083"
+    },
+    {
+      "label": "cliff",
+      "score": "0.0680"
+    },
+    {
+      "label": "monastery",
+      "score": "0.0380"
+    },
+    {
+      "label": "alp",
+      "score": "0.0353"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/158.jpg": [
+    {
+      "label": "fountain",
+      "score": "0.1255"
+    },
+    {
+      "label": "speedboat",
+      "score": "0.1231"
+    },
+    {
+      "label": "dam",
+      "score": "0.1145"
+    },
+    {
+      "label": "valley",
+      "score": "0.0597"
+    },
+    {
+      "label": "fireboat",
+      "score": "0.0439"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/159.jpg": [
+    {
+      "label": "promontory",
+      "score": "0.6125"
+    },
+    {
+      "label": "cliff",
+      "score": "0.2556"
+    },
+    {
+      "label": "seashore",
+      "score": "0.0126"
+    },
+    {
+      "label": "valley",
+      "score": "0.0092"
+    },
+    {
+      "label": "alp",
+      "score": "0.0047"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/16.jpg": [
+    {
+      "label": "valley",
+      "score": "0.2782"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.2661"
+    },
+    {
+      "label": "alp",
+      "score": "0.1382"
+    },
+    {
+      "label": "volcano",
+      "score": "0.0814"
+    },
+    {
+      "label": "promontory",
+      "score": "0.0524"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/160.jpg": [
+    {
+      "label": "promontory",
+      "score": "0.4659"
+    },
+    {
+      "label": "cliff",
+      "score": "0.1564"
+    },
+    {
+      "label": "seashore",
+      "score": "0.0697"
+    },
+    {
+      "label": "valley",
+      "score": "0.0527"
+    },
+    {
+      "label": "dam",
+      "score": "0.0226"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/161.jpg": [
+    {
+      "label": "grey_whale",
+      "score": "0.0913"
+    },
+    {
+      "label": "volcano",
+      "score": "0.0662"
+    },
+    {
+      "label": "hen-of-the-woods",
+      "score": "0.0660"
+    },
+    {
+      "label": "chiton",
+      "score": "0.0516"
+    },
+    {
+      "label": "coral_reef",
+      "score": "0.0398"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/162.jpg": [
+    {
+      "label": "marmot",
+      "score": "0.7756"
+    },
+    {
+      "label": "fox_squirrel",
+      "score": "0.0180"
+    },
+    {
+      "label": "snow_leopard",
+      "score": "0.0044"
+    },
+    {
+      "label": "mink",
+      "score": "0.0032"
+    },
+    {
+      "label": "Kerry_blue_terrier",
+      "score": "0.0025"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/163.jpg": [
+    {
+      "label": "lakeside",
+      "score": "0.5443"
+    },
+    {
+      "label": "valley",
+      "score": "0.0598"
+    },
+    {
+      "label": "seashore",
+      "score": "0.0562"
+    },
+    {
+      "label": "sandbar",
+      "score": "0.0436"
+    },
+    {
+      "label": "promontory",
+      "score": "0.0213"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/164.jpg": [
+    {
+      "label": "valley",
+      "score": "0.2561"
+    },
+    {
+      "label": "dam",
+      "score": "0.1881"
+    },
+    {
+      "label": "cliff",
+      "score": "0.1332"
+    },
+    {
+      "label": "alp",
+      "score": "0.0884"
+    },
+    {
+      "label": "volcano",
+      "score": "0.0722"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/165.jpg": [
+    {
+      "label": "alp",
+      "score": "0.6316"
+    },
+    {
+      "label": "ski",
+      "score": "0.0340"
+    },
+    {
+      "label": "valley",
+      "score": "0.0215"
+    },
+    {
+      "label": "dam",
+      "score": "0.0192"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0137"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/166.jpg": [
+    {
+      "label": "promontory",
+      "score": "0.7889"
+    },
+    {
+      "label": "volcano",
+      "score": "0.0458"
+    },
+    {
+      "label": "cliff",
+      "score": "0.0224"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0163"
+    },
+    {
+      "label": "seashore",
+      "score": "0.0132"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/167.jpg": [
+    {
+      "label": "barn",
+      "score": "0.3324"
+    },
+    {
+      "label": "boathouse",
+      "score": "0.2206"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0451"
+    },
+    {
+      "label": "alp",
+      "score": "0.0355"
+    },
+    {
+      "label": "seashore",
+      "score": "0.0196"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/168.jpg": [
+    {
+      "label": "valley",
+      "score": "0.6842"
+    },
+    {
+      "label": "alp",
+      "score": "0.2109"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0150"
+    },
+    {
+      "label": "promontory",
+      "score": "0.0096"
+    },
+    {
+      "label": "cliff",
+      "score": "0.0073"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/169.jpg": [
+    {
+      "label": "alp",
+      "score": "0.2119"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0999"
+    },
+    {
+      "label": "promontory",
+      "score": "0.0783"
+    },
+    {
+      "label": "cliff",
+      "score": "0.0609"
+    },
+    {
+      "label": "valley",
+      "score": "0.0294"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/17.jpg": [
+    {
+      "label": "seashore",
+      "score": "0.4493"
+    },
+    {
+      "label": "promontory",
+      "score": "0.3179"
+    },
+    {
+      "label": "breakwater",
+      "score": "0.0325"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0227"
+    },
+    {
+      "label": "cliff",
+      "score": "0.0157"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/170.jpg": [
+    {
+      "label": "valley",
+      "score": "0.8432"
+    },
+    {
+      "label": "volcano",
+      "score": "0.0186"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0163"
+    },
+    {
+      "label": "promontory",
+      "score": "0.0112"
+    },
+    {
+      "label": "seashore",
+      "score": "0.0071"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/171.jpg": [
+    {
+      "label": "grey_whale",
+      "score": "0.5250"
+    },
+    {
+      "label": "geyser",
+      "score": "0.0809"
+    },
+    {
+      "label": "alp",
+      "score": "0.0393"
+    },
+    {
+      "label": "promontory",
+      "score": "0.0337"
+    },
+    {
+      "label": "seashore",
+      "score": "0.0171"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/172.jpg": [
+    {
+      "label": "alp",
+      "score": "0.4336"
+    },
+    {
+      "label": "valley",
+      "score": "0.1448"
+    },
+    {
+      "label": "volcano",
+      "score": "0.0818"
+    },
+    {
+      "label": "geyser",
+      "score": "0.0708"
+    },
+    {
+      "label": "promontory",
+      "score": "0.0643"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/173.jpg": [
+    {
+      "label": "coral_reef",
+      "score": "0.2917"
+    },
+    {
+      "label": "grey_whale",
+      "score": "0.0912"
+    },
+    {
+      "label": "promontory",
+      "score": "0.0707"
+    },
+    {
+      "label": "seashore",
+      "score": "0.0543"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0283"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/174.jpg": [
+    {
+      "label": "alp",
+      "score": "0.2948"
+    },
+    {
+      "label": "boathouse",
+      "score": "0.1631"
+    },
+    {
+      "label": "barn",
+      "score": "0.0627"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0463"
+    },
+    {
+      "label": "valley",
+      "score": "0.0115"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/175.jpg": [
+    {
+      "label": "container_ship",
+      "score": "0.2076"
+    },
+    {
+      "label": "fireboat",
+      "score": "0.0686"
+    },
+    {
+      "label": "promontory",
+      "score": "0.0682"
+    },
+    {
+      "label": "parachute",
+      "score": "0.0581"
+    },
+    {
+      "label": "cliff",
+      "score": "0.0574"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/176.jpg": [
+    {
+      "label": "alp",
+      "score": "0.1422"
+    },
+    {
+      "label": "seashore",
+      "score": "0.1201"
+    },
+    {
+      "label": "promontory",
+      "score": "0.0790"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0747"
+    },
+    {
+      "label": "valley",
+      "score": "0.0714"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/177.jpg": [
+    {
+      "label": "alp",
+      "score": "0.3105"
+    },
+    {
+      "label": "valley",
+      "score": "0.2103"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.1578"
+    },
+    {
+      "label": "seashore",
+      "score": "0.0456"
+    },
+    {
+      "label": "dam",
+      "score": "0.0170"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/178.jpg": [
+    {
+      "label": "promontory",
+      "score": "0.5746"
+    },
+    {
+      "label": "seashore",
+      "score": "0.2049"
+    },
+    {
+      "label": "coral_reef",
+      "score": "0.0172"
+    },
+    {
+      "label": "aircraft_carrier",
+      "score": "0.0143"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0126"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/179.jpg": [
+    {
+      "label": "volcano",
+      "score": "0.3418"
+    },
+    {
+      "label": "valley",
+      "score": "0.2012"
+    },
+    {
+      "label": "alp",
+      "score": "0.0974"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0136"
+    },
+    {
+      "label": "promontory",
+      "score": "0.0091"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/18.jpg": [
+    {
+      "label": "alp",
+      "score": "0.4207"
+    },
+    {
+      "label": "geyser",
+      "score": "0.1642"
+    },
+    {
+      "label": "volcano",
+      "score": "0.1224"
+    },
+    {
+      "label": "valley",
+      "score": "0.0567"
+    },
+    {
+      "label": "cliff",
+      "score": "0.0150"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/180.jpg": [
+    {
+      "label": "seashore",
+      "score": "0.3835"
+    },
+    {
+      "label": "promontory",
+      "score": "0.1971"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0765"
+    },
+    {
+      "label": "coral_reef",
+      "score": "0.0565"
+    },
+    {
+      "label": "valley",
+      "score": "0.0199"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/181.jpg": [
+    {
+      "label": "alp",
+      "score": "0.6039"
+    },
+    {
+      "label": "valley",
+      "score": "0.2275"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0666"
+    },
+    {
+      "label": "volcano",
+      "score": "0.0115"
+    },
+    {
+      "label": "mountain_tent",
+      "score": "0.0088"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/182.jpg": [
+    {
+      "label": "promontory",
+      "score": "0.4847"
+    },
+    {
+      "label": "seashore",
+      "score": "0.4366"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0056"
+    },
+    {
+      "label": "cliff",
+      "score": "0.0043"
+    },
+    {
+      "label": "valley",
+      "score": "0.0037"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/183.jpg": [
+    {
+      "label": "promontory",
+      "score": "0.3456"
+    },
+    {
+      "label": "seashore",
+      "score": "0.2052"
+    },
+    {
+      "label": "cliff",
+      "score": "0.1508"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0268"
+    },
+    {
+      "label": "coral_reef",
+      "score": "0.0207"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/184.jpg": [
+    {
+      "label": "vase",
+      "score": "0.1490"
+    },
+    {
+      "label": "perfume",
+      "score": "0.0302"
+    },
+    {
+      "label": "hair_slide",
+      "score": "0.0275"
+    },
+    {
+      "label": "necklace",
+      "score": "0.0256"
+    },
+    {
+      "label": "drilling_platform",
+      "score": "0.0243"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/185.jpg": [
+    {
+      "label": "seashore",
+      "score": "0.4454"
+    },
+    {
+      "label": "promontory",
+      "score": "0.1731"
+    },
+    {
+      "label": "sandbar",
+      "score": "0.1100"
+    },
+    {
+      "label": "alp",
+      "score": "0.0135"
+    },
+    {
+      "label": "cliff",
+      "score": "0.0075"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/186.jpg": [
+    {
+      "label": "promontory",
+      "score": "0.3173"
+    },
+    {
+      "label": "alp",
+      "score": "0.1744"
+    },
+    {
+      "label": "valley",
+      "score": "0.1582"
+    },
+    {
+      "label": "seashore",
+      "score": "0.0799"
+    },
+    {
+      "label": "cliff",
+      "score": "0.0354"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/187.jpg": [
+    {
+      "label": "lakeside",
+      "score": "0.4017"
+    },
+    {
+      "label": "dam",
+      "score": "0.1672"
+    },
+    {
+      "label": "promontory",
+      "score": "0.0390"
+    },
+    {
+      "label": "valley",
+      "score": "0.0339"
+    },
+    {
+      "label": "canoe",
+      "score": "0.0247"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/188.jpg": [
+    {
+      "label": "volcano",
+      "score": "0.6751"
+    },
+    {
+      "label": "geyser",
+      "score": "0.2265"
+    },
+    {
+      "label": "valley",
+      "score": "0.0109"
+    },
+    {
+      "label": "alp",
+      "score": "0.0066"
+    },
+    {
+      "label": "seashore",
+      "score": "0.0034"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/189.jpg": [
+    {
+      "label": "car_mirror",
+      "score": "0.9610"
+    },
+    {
+      "label": "sunglass",
+      "score": "0.0073"
+    },
+    {
+      "label": "television",
+      "score": "0.0039"
+    },
+    {
+      "label": "loupe",
+      "score": "0.0025"
+    },
+    {
+      "label": "sunglasses",
+      "score": "0.0013"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/19.jpg": [
+    {
+      "label": "geyser",
+      "score": "0.2467"
+    },
+    {
+      "label": "volcano",
+      "score": "0.1097"
+    },
+    {
+      "label": "valley",
+      "score": "0.0996"
+    },
+    {
+      "label": "seashore",
+      "score": "0.0906"
+    },
+    {
+      "label": "promontory",
+      "score": "0.0859"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/190.jpg": [
+    {
+      "label": "alp",
+      "score": "0.7030"
+    },
+    {
+      "label": "snowmobile",
+      "score": "0.0922"
+    },
+    {
+      "label": "ski",
+      "score": "0.0474"
+    },
+    {
+      "label": "geyser",
+      "score": "0.0422"
+    },
+    {
+      "label": "black_grouse",
+      "score": "0.0077"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/191.jpg": [
+    {
+      "label": "valley",
+      "score": "0.5940"
+    },
+    {
+      "label": "seashore",
+      "score": "0.1575"
+    },
+    {
+      "label": "promontory",
+      "score": "0.1378"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0367"
+    },
+    {
+      "label": "alp",
+      "score": "0.0082"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/192.jpg": [
+    {
+      "label": "valley",
+      "score": "0.3773"
+    },
+    {
+      "label": "alp",
+      "score": "0.2155"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0132"
+    },
+    {
+      "label": "echidna",
+      "score": "0.0097"
+    },
+    {
+      "label": "coral_reef",
+      "score": "0.0081"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/193.jpg": [
+    {
+      "label": "lakeside",
+      "score": "0.4607"
+    },
+    {
+      "label": "alp",
+      "score": "0.2624"
+    },
+    {
+      "label": "valley",
+      "score": "0.0193"
+    },
+    {
+      "label": "canoe",
+      "score": "0.0179"
+    },
+    {
+      "label": "boathouse",
+      "score": "0.0090"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/194.jpg": [
+    {
+      "label": "lakeside",
+      "score": "0.4790"
+    },
+    {
+      "label": "valley",
+      "score": "0.2034"
+    },
+    {
+      "label": "park_bench",
+      "score": "0.0118"
+    },
+    {
+      "label": "worm_fence",
+      "score": "0.0114"
+    },
+    {
+      "label": "book_jacket",
+      "score": "0.0112"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/195.jpg": [
+    {
+      "label": "alp",
+      "score": "0.6181"
+    },
+    {
+      "label": "ski",
+      "score": "0.0624"
+    },
+    {
+      "label": "valley",
+      "score": "0.0283"
+    },
+    {
+      "label": "snowmobile",
+      "score": "0.0218"
+    },
+    {
+      "label": "geyser",
+      "score": "0.0211"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/196.jpg": [
+    {
+      "label": "volcano",
+      "score": "0.4036"
+    },
+    {
+      "label": "geyser",
+      "score": "0.1432"
+    },
+    {
+      "label": "promontory",
+      "score": "0.0596"
+    },
+    {
+      "label": "seashore",
+      "score": "0.0249"
+    },
+    {
+      "label": "wreck",
+      "score": "0.0219"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/197.jpg": [
+    {
+      "label": "promontory",
+      "score": "0.3006"
+    },
+    {
+      "label": "seashore",
+      "score": "0.1171"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0675"
+    },
+    {
+      "label": "cliff",
+      "score": "0.0612"
+    },
+    {
+      "label": "dam",
+      "score": "0.0266"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/198.jpg": [
+    {
+      "label": "maypole",
+      "score": "0.1498"
+    },
+    {
+      "label": "stupa",
+      "score": "0.0613"
+    },
+    {
+      "label": "pirate",
+      "score": "0.0594"
+    },
+    {
+      "label": "schooner",
+      "score": "0.0535"
+    },
+    {
+      "label": "greenhouse",
+      "score": "0.0508"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/199.jpg": [
+    {
+      "label": "seashore",
+      "score": "0.5591"
+    },
+    {
+      "label": "promontory",
+      "score": "0.1534"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0434"
+    },
+    {
+      "label": "valley",
+      "score": "0.0255"
+    },
+    {
+      "label": "dam",
+      "score": "0.0083"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/2.jpg": [
+    {
+      "label": "lakeside",
+      "score": "0.6120"
+    },
+    {
+      "label": "valley",
+      "score": "0.0518"
+    },
+    {
+      "label": "alp",
+      "score": "0.0446"
+    },
+    {
+      "label": "sunglass",
+      "score": "0.0238"
+    },
+    {
+      "label": "golf_ball",
+      "score": "0.0218"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/20.jpg": [
+    {
+      "label": "valley",
+      "score": "0.3658"
+    },
+    {
+      "label": "dam",
+      "score": "0.0729"
+    },
+    {
+      "label": "promontory",
+      "score": "0.0524"
+    },
+    {
+      "label": "cliff",
+      "score": "0.0441"
+    },
+    {
+      "label": "geyser",
+      "score": "0.0385"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/200.jpg": [
+    {
+      "label": "lakeside",
+      "score": "0.1651"
+    },
+    {
+      "label": "valley",
+      "score": "0.0860"
+    },
+    {
+      "label": "maze",
+      "score": "0.0775"
+    },
+    {
+      "label": "mountain_tent",
+      "score": "0.0629"
+    },
+    {
+      "label": "alp",
+      "score": "0.0164"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/201.jpg": [
+    {
+      "label": "alp",
+      "score": "0.9006"
+    },
+    {
+      "label": "ski",
+      "score": "0.0524"
+    },
+    {
+      "label": "snowmobile",
+      "score": "0.0036"
+    },
+    {
+      "label": "valley",
+      "score": "0.0028"
+    },
+    {
+      "label": "mountain_tent",
+      "score": "0.0027"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/202.jpg": [
+    {
+      "label": "valley",
+      "score": "0.2818"
+    },
+    {
+      "label": "alp",
+      "score": "0.2071"
+    },
+    {
+      "label": "promontory",
+      "score": "0.1022"
+    },
+    {
+      "label": "seashore",
+      "score": "0.0385"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0227"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/203.jpg": [
+    {
+      "label": "geyser",
+      "score": "0.4429"
+    },
+    {
+      "label": "volcano",
+      "score": "0.3551"
+    },
+    {
+      "label": "alp",
+      "score": "0.0253"
+    },
+    {
+      "label": "cliff",
+      "score": "0.0074"
+    },
+    {
+      "label": "ski",
+      "score": "0.0048"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/204.jpg": [
+    {
+      "label": "ptarmigan",
+      "score": "0.4761"
+    },
+    {
+      "label": "black_grouse",
+      "score": "0.0680"
+    },
+    {
+      "label": "partridge",
+      "score": "0.0532"
+    },
+    {
+      "label": "vulture",
+      "score": "0.0415"
+    },
+    {
+      "label": "ruffed_grouse",
+      "score": "0.0397"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/205.jpg": [
+    {
+      "label": "geyser",
+      "score": "0.6831"
+    },
+    {
+      "label": "volcano",
+      "score": "0.0741"
+    },
+    {
+      "label": "alp",
+      "score": "0.0142"
+    },
+    {
+      "label": "valley",
+      "score": "0.0131"
+    },
+    {
+      "label": "megalith",
+      "score": "0.0091"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/206.jpg": [
+    {
+      "label": "seashore",
+      "score": "0.4508"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.1495"
+    },
+    {
+      "label": "promontory",
+      "score": "0.1247"
+    },
+    {
+      "label": "sandbar",
+      "score": "0.0637"
+    },
+    {
+      "label": "cliff",
+      "score": "0.0297"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/207.jpg": [
+    {
+      "label": "ski",
+      "score": "0.1954"
+    },
+    {
+      "label": "snowmobile",
+      "score": "0.0965"
+    },
+    {
+      "label": "dogsled",
+      "score": "0.0707"
+    },
+    {
+      "label": "snowplow",
+      "score": "0.0402"
+    },
+    {
+      "label": "alp",
+      "score": "0.0249"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/208.jpg": [
+    {
+      "label": "valley",
+      "score": "0.6746"
+    },
+    {
+      "label": "alp",
+      "score": "0.0900"
+    },
+    {
+      "label": "volcano",
+      "score": "0.0540"
+    },
+    {
+      "label": "worm_fence",
+      "score": "0.0143"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0069"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/209.jpg": [
+    {
+      "label": "church",
+      "score": "0.3547"
+    },
+    {
+      "label": "bell_cote",
+      "score": "0.1147"
+    },
+    {
+      "label": "alp",
+      "score": "0.0829"
+    },
+    {
+      "label": "boathouse",
+      "score": "0.0815"
+    },
+    {
+      "label": "barn",
+      "score": "0.0723"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/21.jpg": [
+    {
+      "label": "valley",
+      "score": "0.6696"
+    },
+    {
+      "label": "alp",
+      "score": "0.1121"
+    },
+    {
+      "label": "volcano",
+      "score": "0.1004"
+    },
+    {
+      "label": "promontory",
+      "score": "0.0073"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0061"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/210.jpg": [
+    {
+      "label": "jellyfish",
+      "score": "0.8627"
+    },
+    {
+      "label": "nematode",
+      "score": "0.0136"
+    },
+    {
+      "label": "isopod",
+      "score": "0.0051"
+    },
+    {
+      "label": "dugong",
+      "score": "0.0042"
+    },
+    {
+      "label": "electric_ray",
+      "score": "0.0028"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/211.jpg": [
+    {
+      "label": "jellyfish",
+      "score": "0.5742"
+    },
+    {
+      "label": "pick",
+      "score": "0.0611"
+    },
+    {
+      "label": "electric_ray",
+      "score": "0.0098"
+    },
+    {
+      "label": "nematode",
+      "score": "0.0057"
+    },
+    {
+      "label": "dugong",
+      "score": "0.0057"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/212.jpg": [
+    {
+      "label": "nematode",
+      "score": "0.9045"
+    },
+    {
+      "label": "nail",
+      "score": "0.0080"
+    },
+    {
+      "label": "jellyfish",
+      "score": "0.0066"
+    },
+    {
+      "label": "flatworm",
+      "score": "0.0051"
+    },
+    {
+      "label": "hook",
+      "score": "0.0029"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/213.jpg": [
+    {
+      "label": "brown_bear",
+      "score": "0.3843"
+    },
+    {
+      "label": "coyote",
+      "score": "0.0692"
+    },
+    {
+      "label": "red_fox",
+      "score": "0.0646"
+    },
+    {
+      "label": "dhole",
+      "score": "0.0438"
+    },
+    {
+      "label": "grey_fox",
+      "score": "0.0349"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/214.jpg": [
+    {
+      "label": "volcano",
+      "score": "0.1537"
+    },
+    {
+      "label": "seashore",
+      "score": "0.1280"
+    },
+    {
+      "label": "sandbar",
+      "score": "0.1063"
+    },
+    {
+      "label": "cliff",
+      "score": "0.0351"
+    },
+    {
+      "label": "promontory",
+      "score": "0.0348"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/215.jpg": [
+    {
+      "label": "kite",
+      "score": "0.5556"
+    },
+    {
+      "label": "bald_eagle",
+      "score": "0.0596"
+    },
+    {
+      "label": "steel_arch_bridge",
+      "score": "0.0100"
+    },
+    {
+      "label": "neck_brace",
+      "score": "0.0084"
+    },
+    {
+      "label": "waffle_iron",
+      "score": "0.0077"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/216.jpg": [
+    {
+      "label": "volcano",
+      "score": "0.7327"
+    },
+    {
+      "label": "alp",
+      "score": "0.1989"
+    },
+    {
+      "label": "valley",
+      "score": "0.0080"
+    },
+    {
+      "label": "mountain_tent",
+      "score": "0.0027"
+    },
+    {
+      "label": "promontory",
+      "score": "0.0026"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/217.jpg": [
+    {
+      "label": "boathouse",
+      "score": "0.3489"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.3090"
+    },
+    {
+      "label": "snowplow",
+      "score": "0.0220"
+    },
+    {
+      "label": "amphibian",
+      "score": "0.0168"
+    },
+    {
+      "label": "beacon",
+      "score": "0.0106"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/218.jpg": [
+    {
+      "label": "volcano",
+      "score": "0.3825"
+    },
+    {
+      "label": "geyser",
+      "score": "0.2221"
+    },
+    {
+      "label": "promontory",
+      "score": "0.0652"
+    },
+    {
+      "label": "valley",
+      "score": "0.0197"
+    },
+    {
+      "label": "alp",
+      "score": "0.0148"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/219.jpg": [
+    {
+      "label": "alp",
+      "score": "0.5568"
+    },
+    {
+      "label": "ski",
+      "score": "0.2100"
+    },
+    {
+      "label": "dogsled",
+      "score": "0.0716"
+    },
+    {
+      "label": "snowmobile",
+      "score": "0.0351"
+    },
+    {
+      "label": "parachute",
+      "score": "0.0079"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/22.jpg": [
+    {
+      "label": "black_grouse",
+      "score": "0.2483"
+    },
+    {
+      "label": "ptarmigan",
+      "score": "0.1221"
+    },
+    {
+      "label": "albatross",
+      "score": "0.1146"
+    },
+    {
+      "label": "red-breasted_merganser",
+      "score": "0.0538"
+    },
+    {
+      "label": "prairie_chicken",
+      "score": "0.0370"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/220.jpg": [
+    {
+      "label": "space_shuttle",
+      "score": "0.2754"
+    },
+    {
+      "label": "geyser",
+      "score": "0.0509"
+    },
+    {
+      "label": "projectile",
+      "score": "0.0495"
+    },
+    {
+      "label": "valley",
+      "score": "0.0454"
+    },
+    {
+      "label": "dam",
+      "score": "0.0367"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/221.jpg": [
+    {
+      "label": "church",
+      "score": "0.1371"
+    },
+    {
+      "label": "yawl",
+      "score": "0.0815"
+    },
+    {
+      "label": "projectile",
+      "score": "0.0483"
+    },
+    {
+      "label": "missile",
+      "score": "0.0451"
+    },
+    {
+      "label": "stupa",
+      "score": "0.0305"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/222.jpg": [
+    {
+      "label": "volcano",
+      "score": "0.3089"
+    },
+    {
+      "label": "geyser",
+      "score": "0.2530"
+    },
+    {
+      "label": "seashore",
+      "score": "0.1058"
+    },
+    {
+      "label": "valley",
+      "score": "0.0299"
+    },
+    {
+      "label": "grey_whale",
+      "score": "0.0257"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/223.jpg": [
+    {
+      "label": "barn",
+      "score": "0.4393"
+    },
+    {
+      "label": "alp",
+      "score": "0.2775"
+    },
+    {
+      "label": "worm_fence",
+      "score": "0.0201"
+    },
+    {
+      "label": "church",
+      "score": "0.0200"
+    },
+    {
+      "label": "boathouse",
+      "score": "0.0107"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/224.jpg": [
+    {
+      "label": "seashore",
+      "score": "0.4333"
+    },
+    {
+      "label": "alp",
+      "score": "0.1191"
+    },
+    {
+      "label": "solar_dish",
+      "score": "0.0355"
+    },
+    {
+      "label": "leatherback_turtle",
+      "score": "0.0226"
+    },
+    {
+      "label": "snowmobile",
+      "score": "0.0185"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/225.jpg": [
+    {
+      "label": "valley",
+      "score": "0.2716"
+    },
+    {
+      "label": "alp",
+      "score": "0.1850"
+    },
+    {
+      "label": "mountain_tent",
+      "score": "0.0309"
+    },
+    {
+      "label": "monastery",
+      "score": "0.0216"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0195"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/226.jpg": [
+    {
+      "label": "Arctic_fox",
+      "score": "0.8486"
+    },
+    {
+      "label": "Samoyed",
+      "score": "0.0554"
+    },
+    {
+      "label": "ice_bear",
+      "score": "0.0298"
+    },
+    {
+      "label": "schooner",
+      "score": "0.0020"
+    },
+    {
+      "label": "pirate",
+      "score": "0.0017"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/227.jpg": [
+    {
+      "label": "Arctic_fox",
+      "score": "0.7573"
+    },
+    {
+      "label": "ice_bear",
+      "score": "0.1387"
+    },
+    {
+      "label": "white_wolf",
+      "score": "0.0083"
+    },
+    {
+      "label": "malamute",
+      "score": "0.0067"
+    },
+    {
+      "label": "Bedlington_terrier",
+      "score": "0.0050"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/228.jpg": [
+    {
+      "label": "hog",
+      "score": "0.2109"
+    },
+    {
+      "label": "Arctic_fox",
+      "score": "0.2107"
+    },
+    {
+      "label": "wild_boar",
+      "score": "0.1852"
+    },
+    {
+      "label": "white_wolf",
+      "score": "0.0212"
+    },
+    {
+      "label": "warthog",
+      "score": "0.0198"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/229.jpg": [
+    {
+      "label": "valley",
+      "score": "0.4568"
+    },
+    {
+      "label": "promontory",
+      "score": "0.1046"
+    },
+    {
+      "label": "cliff",
+      "score": "0.0666"
+    },
+    {
+      "label": "alp",
+      "score": "0.0314"
+    },
+    {
+      "label": "seashore",
+      "score": "0.0194"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/23.jpg": [
+    {
+      "label": "seashore",
+      "score": "0.6851"
+    },
+    {
+      "label": "promontory",
+      "score": "0.1983"
+    },
+    {
+      "label": "sandbar",
+      "score": "0.0278"
+    },
+    {
+      "label": "coral_reef",
+      "score": "0.0030"
+    },
+    {
+      "label": "cliff",
+      "score": "0.0015"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/230.jpg": [
+    {
+      "label": "seashore",
+      "score": "0.3517"
+    },
+    {
+      "label": "promontory",
+      "score": "0.2233"
+    },
+    {
+      "label": "submarine",
+      "score": "0.0729"
+    },
+    {
+      "label": "breakwater",
+      "score": "0.0532"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0140"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/231.jpg": [
+    {
+      "label": "lifeboat",
+      "score": "0.2349"
+    },
+    {
+      "label": "snowplow",
+      "score": "0.0809"
+    },
+    {
+      "label": "harvester",
+      "score": "0.0530"
+    },
+    {
+      "label": "crane",
+      "score": "0.0479"
+    },
+    {
+      "label": "garbage_truck",
+      "score": "0.0255"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/232.jpg": [
+    {
+      "label": "promontory",
+      "score": "0.3315"
+    },
+    {
+      "label": "valley",
+      "score": "0.1850"
+    },
+    {
+      "label": "cliff",
+      "score": "0.1504"
+    },
+    {
+      "label": "seashore",
+      "score": "0.0160"
+    },
+    {
+      "label": "dam",
+      "score": "0.0151"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/233.jpg": [
+    {
+      "label": "promontory",
+      "score": "0.3866"
+    },
+    {
+      "label": "seashore",
+      "score": "0.2708"
+    },
+    {
+      "label": "alp",
+      "score": "0.0590"
+    },
+    {
+      "label": "valley",
+      "score": "0.0297"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0293"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/234.jpg": [
+    {
+      "label": "brown_bear",
+      "score": "0.9785"
+    },
+    {
+      "label": "jaguar",
+      "score": "0.0011"
+    },
+    {
+      "label": "otterhound",
+      "score": "0.0008"
+    },
+    {
+      "label": "hog",
+      "score": "0.0008"
+    },
+    {
+      "label": "cheetah",
+      "score": "0.0007"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/235.jpg": [
+    {
+      "label": "jaguar",
+      "score": "0.1340"
+    },
+    {
+      "label": "brown_bear",
+      "score": "0.1097"
+    },
+    {
+      "label": "leopard",
+      "score": "0.0454"
+    },
+    {
+      "label": "cheetah",
+      "score": "0.0420"
+    },
+    {
+      "label": "valley",
+      "score": "0.0301"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/236.jpg": [
+    {
+      "label": "brown_bear",
+      "score": "0.5274"
+    },
+    {
+      "label": "bison",
+      "score": "0.0431"
+    },
+    {
+      "label": "Irish_water_spaniel",
+      "score": "0.0361"
+    },
+    {
+      "label": "ox",
+      "score": "0.0228"
+    },
+    {
+      "label": "hog",
+      "score": "0.0178"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/237.jpg": [
+    {
+      "label": "jaguar",
+      "score": "0.2921"
+    },
+    {
+      "label": "leopard",
+      "score": "0.1946"
+    },
+    {
+      "label": "snow_leopard",
+      "score": "0.0541"
+    },
+    {
+      "label": "tiger",
+      "score": "0.0445"
+    },
+    {
+      "label": "komondor",
+      "score": "0.0296"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/238.jpg": [
+    {
+      "label": "alp",
+      "score": "0.7857"
+    },
+    {
+      "label": "grey_whale",
+      "score": "0.0341"
+    },
+    {
+      "label": "valley",
+      "score": "0.0276"
+    },
+    {
+      "label": "volcano",
+      "score": "0.0147"
+    },
+    {
+      "label": "promontory",
+      "score": "0.0129"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/239.jpg": [
+    {
+      "label": "boathouse",
+      "score": "0.1831"
+    },
+    {
+      "label": "alp",
+      "score": "0.1576"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.1475"
+    },
+    {
+      "label": "thatch",
+      "score": "0.1241"
+    },
+    {
+      "label": "barn",
+      "score": "0.0368"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/24.jpg": [
+    {
+      "label": "alp",
+      "score": "0.5186"
+    },
+    {
+      "label": "valley",
+      "score": "0.2810"
+    },
+    {
+      "label": "cliff",
+      "score": "0.0551"
+    },
+    {
+      "label": "promontory",
+      "score": "0.0258"
+    },
+    {
+      "label": "mountain_tent",
+      "score": "0.0063"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/240.jpg": [
+    {
+      "label": "promontory",
+      "score": "0.2534"
+    },
+    {
+      "label": "valley",
+      "score": "0.2369"
+    },
+    {
+      "label": "seashore",
+      "score": "0.2301"
+    },
+    {
+      "label": "alp",
+      "score": "0.0793"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0391"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/241.jpg": [
+    {
+      "label": "geyser",
+      "score": "0.8282"
+    },
+    {
+      "label": "valley",
+      "score": "0.0202"
+    },
+    {
+      "label": "cliff",
+      "score": "0.0145"
+    },
+    {
+      "label": "volcano",
+      "score": "0.0109"
+    },
+    {
+      "label": "promontory",
+      "score": "0.0052"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/242.jpg": [
+    {
+      "label": "Petri_dish",
+      "score": "0.0443"
+    },
+    {
+      "label": "consomme",
+      "score": "0.0411"
+    },
+    {
+      "label": "lighter",
+      "score": "0.0380"
+    },
+    {
+      "label": "toilet_seat",
+      "score": "0.0358"
+    },
+    {
+      "label": "pick",
+      "score": "0.0277"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/243.jpg": [
+    {
+      "label": "ice_bear",
+      "score": "0.3425"
+    },
+    {
+      "label": "timber_wolf",
+      "score": "0.1619"
+    },
+    {
+      "label": "otter",
+      "score": "0.0672"
+    },
+    {
+      "label": "white_wolf",
+      "score": "0.0637"
+    },
+    {
+      "label": "coyote",
+      "score": "0.0349"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/244.jpg": [
+    {
+      "label": "valley",
+      "score": "0.6498"
+    },
+    {
+      "label": "alp",
+      "score": "0.1765"
+    },
+    {
+      "label": "promontory",
+      "score": "0.0308"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0278"
+    },
+    {
+      "label": "volcano",
+      "score": "0.0129"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/245.jpg": [
+    {
+      "label": "alp",
+      "score": "0.2795"
+    },
+    {
+      "label": "dam",
+      "score": "0.0441"
+    },
+    {
+      "label": "snowplow",
+      "score": "0.0332"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0288"
+    },
+    {
+      "label": "ski",
+      "score": "0.0235"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/246.jpg": [
+    {
+      "label": "seashore",
+      "score": "0.1897"
+    },
+    {
+      "label": "breakwater",
+      "score": "0.1118"
+    },
+    {
+      "label": "valley",
+      "score": "0.0847"
+    },
+    {
+      "label": "alp",
+      "score": "0.0634"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0283"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/247.jpg": [
+    {
+      "label": "geyser",
+      "score": "0.2928"
+    },
+    {
+      "label": "seashore",
+      "score": "0.0702"
+    },
+    {
+      "label": "Irish_water_spaniel",
+      "score": "0.0625"
+    },
+    {
+      "label": "grey_whale",
+      "score": "0.0550"
+    },
+    {
+      "label": "weasel",
+      "score": "0.0170"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/248.jpg": [
+    {
+      "label": "geyser",
+      "score": "0.3287"
+    },
+    {
+      "label": "seashore",
+      "score": "0.0597"
+    },
+    {
+      "label": "beacon",
+      "score": "0.0441"
+    },
+    {
+      "label": "volcano",
+      "score": "0.0314"
+    },
+    {
+      "label": "promontory",
+      "score": "0.0303"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/249.jpg": [
+    {
+      "label": "seashore",
+      "score": "0.5142"
+    },
+    {
+      "label": "sandbar",
+      "score": "0.0545"
+    },
+    {
+      "label": "promontory",
+      "score": "0.0452"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0304"
+    },
+    {
+      "label": "unicycle",
+      "score": "0.0302"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/25.jpg": [
+    {
+      "label": "lakeside",
+      "score": "0.4288"
+    },
+    {
+      "label": "boathouse",
+      "score": "0.2630"
+    },
+    {
+      "label": "pirate",
+      "score": "0.0858"
+    },
+    {
+      "label": "promontory",
+      "score": "0.0170"
+    },
+    {
+      "label": "catamaran",
+      "score": "0.0093"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/250.jpg": [
+    {
+      "label": "geyser",
+      "score": "0.6204"
+    },
+    {
+      "label": "seashore",
+      "score": "0.1947"
+    },
+    {
+      "label": "volcano",
+      "score": "0.0282"
+    },
+    {
+      "label": "promontory",
+      "score": "0.0141"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0082"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/251.jpg": [
+    {
+      "label": "warplane",
+      "score": "0.0968"
+    },
+    {
+      "label": "aircraft_carrier",
+      "score": "0.0895"
+    },
+    {
+      "label": "wing",
+      "score": "0.0233"
+    },
+    {
+      "label": "television",
+      "score": "0.0187"
+    },
+    {
+      "label": "envelope",
+      "score": "0.0180"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/252.jpg": [
+    {
+      "label": "geyser",
+      "score": "0.2573"
+    },
+    {
+      "label": "grey_whale",
+      "score": "0.1701"
+    },
+    {
+      "label": "breastplate",
+      "score": "0.0674"
+    },
+    {
+      "label": "stage",
+      "score": "0.0585"
+    },
+    {
+      "label": "scuba_diver",
+      "score": "0.0565"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/253.jpg": [
+    {
+      "label": "fountain",
+      "score": "0.2800"
+    },
+    {
+      "label": "caldron",
+      "score": "0.0328"
+    },
+    {
+      "label": "airship",
+      "score": "0.0282"
+    },
+    {
+      "label": "fireboat",
+      "score": "0.0185"
+    },
+    {
+      "label": "geyser",
+      "score": "0.0148"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/254.jpg": [
+    {
+      "label": "valley",
+      "score": "0.5393"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.1475"
+    },
+    {
+      "label": "promontory",
+      "score": "0.1056"
+    },
+    {
+      "label": "seashore",
+      "score": "0.0545"
+    },
+    {
+      "label": "alp",
+      "score": "0.0279"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/255.jpg": [
+    {
+      "label": "can_opener",
+      "score": "0.1277"
+    },
+    {
+      "label": "nail",
+      "score": "0.0927"
+    },
+    {
+      "label": "nematode",
+      "score": "0.0706"
+    },
+    {
+      "label": "hook",
+      "score": "0.0652"
+    },
+    {
+      "label": "triceratops",
+      "score": "0.0624"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/256.jpg": [
+    {
+      "label": "alp",
+      "score": "0.2271"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.1395"
+    },
+    {
+      "label": "volcano",
+      "score": "0.0582"
+    },
+    {
+      "label": "geyser",
+      "score": "0.0492"
+    },
+    {
+      "label": "mountain_tent",
+      "score": "0.0228"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/257.jpg": [
+    {
+      "label": "geyser",
+      "score": "0.3685"
+    },
+    {
+      "label": "fountain",
+      "score": "0.0574"
+    },
+    {
+      "label": "volcano",
+      "score": "0.0450"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0315"
+    },
+    {
+      "label": "promontory",
+      "score": "0.0303"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/258.jpg": [
+    {
+      "label": "parachute",
+      "score": "0.8639"
+    },
+    {
+      "label": "nematode",
+      "score": "0.0101"
+    },
+    {
+      "label": "dugong",
+      "score": "0.0082"
+    },
+    {
+      "label": "jellyfish",
+      "score": "0.0047"
+    },
+    {
+      "label": "grey_whale",
+      "score": "0.0017"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/259.jpg": [
+    {
+      "label": "alp",
+      "score": "0.6707"
+    },
+    {
+      "label": "barn",
+      "score": "0.0819"
+    },
+    {
+      "label": "valley",
+      "score": "0.0177"
+    },
+    {
+      "label": "ski",
+      "score": "0.0091"
+    },
+    {
+      "label": "mountain_tent",
+      "score": "0.0057"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/26.jpg": [
+    {
+      "label": "lakeside",
+      "score": "0.2585"
+    },
+    {
+      "label": "alp",
+      "score": "0.1663"
+    },
+    {
+      "label": "promontory",
+      "score": "0.1247"
+    },
+    {
+      "label": "valley",
+      "score": "0.0830"
+    },
+    {
+      "label": "seashore",
+      "score": "0.0548"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/260.jpg": [
+    {
+      "label": "breastplate",
+      "score": "0.3979"
+    },
+    {
+      "label": "alp",
+      "score": "0.2560"
+    },
+    {
+      "label": "cuirass",
+      "score": "0.0746"
+    },
+    {
+      "label": "velvet",
+      "score": "0.0642"
+    },
+    {
+      "label": "brassiere",
+      "score": "0.0155"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/261.jpg": [
+    {
+      "label": "snowplow",
+      "score": "0.0798"
+    },
+    {
+      "label": "shovel",
+      "score": "0.0559"
+    },
+    {
+      "label": "torch",
+      "score": "0.0438"
+    },
+    {
+      "label": "snowmobile",
+      "score": "0.0357"
+    },
+    {
+      "label": "stage",
+      "score": "0.0323"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/262.jpg": [
+    {
+      "label": "abaya",
+      "score": "0.1569"
+    },
+    {
+      "label": "torch",
+      "score": "0.1267"
+    },
+    {
+      "label": "cloak",
+      "score": "0.0708"
+    },
+    {
+      "label": "candle",
+      "score": "0.0494"
+    },
+    {
+      "label": "trench_coat",
+      "score": "0.0290"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/263.jpg": [
+    {
+      "label": "brown_bear",
+      "score": "0.6136"
+    },
+    {
+      "label": "jaguar",
+      "score": "0.1073"
+    },
+    {
+      "label": "leopard",
+      "score": "0.1050"
+    },
+    {
+      "label": "lion",
+      "score": "0.0126"
+    },
+    {
+      "label": "ibex",
+      "score": "0.0097"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/264.jpg": [
+    {
+      "label": "volcano",
+      "score": "0.6055"
+    },
+    {
+      "label": "grey_whale",
+      "score": "0.0504"
+    },
+    {
+      "label": "sea_lion",
+      "score": "0.0393"
+    },
+    {
+      "label": "stingray",
+      "score": "0.0224"
+    },
+    {
+      "label": "electric_ray",
+      "score": "0.0202"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/265.jpg": [
+    {
+      "label": "grey_whale",
+      "score": "0.3178"
+    },
+    {
+      "label": "volcano",
+      "score": "0.0721"
+    },
+    {
+      "label": "electric_ray",
+      "score": "0.0604"
+    },
+    {
+      "label": "sea_lion",
+      "score": "0.0431"
+    },
+    {
+      "label": "hippopotamus",
+      "score": "0.0375"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/266.jpg": [
+    {
+      "label": "electric_ray",
+      "score": "0.2907"
+    },
+    {
+      "label": "volcano",
+      "score": "0.0904"
+    },
+    {
+      "label": "sea_lion",
+      "score": "0.0616"
+    },
+    {
+      "label": "hippopotamus",
+      "score": "0.0406"
+    },
+    {
+      "label": "grey_whale",
+      "score": "0.0391"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/267.jpg": [
+    {
+      "label": "seashore",
+      "score": "0.2886"
+    },
+    {
+      "label": "promontory",
+      "score": "0.2801"
+    },
+    {
+      "label": "cliff",
+      "score": "0.2134"
+    },
+    {
+      "label": "valley",
+      "score": "0.0147"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0124"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/268.jpg": [
+    {
+      "label": "killer_whale",
+      "score": "0.5329"
+    },
+    {
+      "label": "grey_whale",
+      "score": "0.1493"
+    },
+    {
+      "label": "seashore",
+      "score": "0.0296"
+    },
+    {
+      "label": "promontory",
+      "score": "0.0104"
+    },
+    {
+      "label": "sea_lion",
+      "score": "0.0103"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/269.jpg": [
+    {
+      "label": "promontory",
+      "score": "0.2845"
+    },
+    {
+      "label": "cliff",
+      "score": "0.1327"
+    },
+    {
+      "label": "seashore",
+      "score": "0.0409"
+    },
+    {
+      "label": "wreck",
+      "score": "0.0379"
+    },
+    {
+      "label": "geyser",
+      "score": "0.0121"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/27.jpg": [
+    {
+      "label": "lakeside",
+      "score": "0.3673"
+    },
+    {
+      "label": "dam",
+      "score": "0.1469"
+    },
+    {
+      "label": "promontory",
+      "score": "0.0619"
+    },
+    {
+      "label": "suspension_bridge",
+      "score": "0.0343"
+    },
+    {
+      "label": "valley",
+      "score": "0.0187"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/270.jpg": [
+    {
+      "label": "geyser",
+      "score": "0.9105"
+    },
+    {
+      "label": "volcano",
+      "score": "0.0095"
+    },
+    {
+      "label": "ski",
+      "score": "0.0084"
+    },
+    {
+      "label": "ice_bear",
+      "score": "0.0037"
+    },
+    {
+      "label": "snowmobile",
+      "score": "0.0019"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/271.jpg": [
+    {
+      "label": "alp",
+      "score": "0.7333"
+    },
+    {
+      "label": "valley",
+      "score": "0.0728"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0242"
+    },
+    {
+      "label": "geyser",
+      "score": "0.0125"
+    },
+    {
+      "label": "promontory",
+      "score": "0.0080"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/272.jpg": [
+    {
+      "label": "lakeside",
+      "score": "0.2756"
+    },
+    {
+      "label": "valley",
+      "score": "0.2747"
+    },
+    {
+      "label": "promontory",
+      "score": "0.0862"
+    },
+    {
+      "label": "dam",
+      "score": "0.0730"
+    },
+    {
+      "label": "seashore",
+      "score": "0.0686"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/273.jpg": [
+    {
+      "label": "seashore",
+      "score": "0.1604"
+    },
+    {
+      "label": "valley",
+      "score": "0.1420"
+    },
+    {
+      "label": "promontory",
+      "score": "0.1357"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0959"
+    },
+    {
+      "label": "alp",
+      "score": "0.0705"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/274.jpg": [
+    {
+      "label": "seashore",
+      "score": "0.3913"
+    },
+    {
+      "label": "promontory",
+      "score": "0.2263"
+    },
+    {
+      "label": "sandbar",
+      "score": "0.0245"
+    },
+    {
+      "label": "alp",
+      "score": "0.0140"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0130"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/275.jpg": [
+    {
+      "label": "lakeside",
+      "score": "0.6622"
+    },
+    {
+      "label": "seashore",
+      "score": "0.0917"
+    },
+    {
+      "label": "sandbar",
+      "score": "0.0368"
+    },
+    {
+      "label": "valley",
+      "score": "0.0305"
+    },
+    {
+      "label": "promontory",
+      "score": "0.0180"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/276.jpg": [
+    {
+      "label": "geyser",
+      "score": "0.3472"
+    },
+    {
+      "label": "fountain",
+      "score": "0.1010"
+    },
+    {
+      "label": "valley",
+      "score": "0.0669"
+    },
+    {
+      "label": "grey_whale",
+      "score": "0.0313"
+    },
+    {
+      "label": "cliff",
+      "score": "0.0112"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/277.jpg": [
+    {
+      "label": "geyser",
+      "score": "0.1754"
+    },
+    {
+      "label": "volcano",
+      "score": "0.0484"
+    },
+    {
+      "label": "missile",
+      "score": "0.0265"
+    },
+    {
+      "label": "grey_whale",
+      "score": "0.0204"
+    },
+    {
+      "label": "alp",
+      "score": "0.0194"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/278.jpg": [
+    {
+      "label": "geyser",
+      "score": "0.9633"
+    },
+    {
+      "label": "fountain",
+      "score": "0.0054"
+    },
+    {
+      "label": "volcano",
+      "score": "0.0022"
+    },
+    {
+      "label": "grey_whale",
+      "score": "0.0019"
+    },
+    {
+      "label": "beacon",
+      "score": "0.0016"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/279.jpg": [
+    {
+      "label": "seashore",
+      "score": "0.1398"
+    },
+    {
+      "label": "alp",
+      "score": "0.1201"
+    },
+    {
+      "label": "promontory",
+      "score": "0.0979"
+    },
+    {
+      "label": "valley",
+      "score": "0.0679"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0284"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/28.jpg": [
+    {
+      "label": "alp",
+      "score": "0.2792"
+    },
+    {
+      "label": "volcano",
+      "score": "0.2753"
+    },
+    {
+      "label": "valley",
+      "score": "0.0639"
+    },
+    {
+      "label": "promontory",
+      "score": "0.0400"
+    },
+    {
+      "label": "cliff",
+      "score": "0.0227"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/280.jpg": [
+    {
+      "label": "dam",
+      "score": "0.1743"
+    },
+    {
+      "label": "geyser",
+      "score": "0.1042"
+    },
+    {
+      "label": "volcano",
+      "score": "0.0509"
+    },
+    {
+      "label": "valley",
+      "score": "0.0472"
+    },
+    {
+      "label": "tub",
+      "score": "0.0461"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/281.jpg": [
+    {
+      "label": "geyser",
+      "score": "0.4615"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0300"
+    },
+    {
+      "label": "mountain_bike",
+      "score": "0.0231"
+    },
+    {
+      "label": "alp",
+      "score": "0.0229"
+    },
+    {
+      "label": "book_jacket",
+      "score": "0.0222"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/282.jpg": [
+    {
+      "label": "tub",
+      "score": "0.1069"
+    },
+    {
+      "label": "fountain",
+      "score": "0.0981"
+    },
+    {
+      "label": "bathtub",
+      "score": "0.0737"
+    },
+    {
+      "label": "notebook",
+      "score": "0.0557"
+    },
+    {
+      "label": "monitor",
+      "score": "0.0435"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/283.jpg": [
+    {
+      "label": "alp",
+      "score": "0.4397"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0874"
+    },
+    {
+      "label": "valley",
+      "score": "0.0636"
+    },
+    {
+      "label": "seashore",
+      "score": "0.0607"
+    },
+    {
+      "label": "sandbar",
+      "score": "0.0276"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/284.jpg": [
+    {
+      "label": "lakeside",
+      "score": "0.5353"
+    },
+    {
+      "label": "alp",
+      "score": "0.1848"
+    },
+    {
+      "label": "valley",
+      "score": "0.0563"
+    },
+    {
+      "label": "seashore",
+      "score": "0.0305"
+    },
+    {
+      "label": "promontory",
+      "score": "0.0301"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/285.jpg": [
+    {
+      "label": "volcano",
+      "score": "0.5800"
+    },
+    {
+      "label": "alp",
+      "score": "0.0645"
+    },
+    {
+      "label": "valley",
+      "score": "0.0165"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0143"
+    },
+    {
+      "label": "geyser",
+      "score": "0.0131"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/286.jpg": [
+    {
+      "label": "alp",
+      "score": "0.3862"
+    },
+    {
+      "label": "electric_locomotive",
+      "score": "0.0896"
+    },
+    {
+      "label": "aircraft_carrier",
+      "score": "0.0296"
+    },
+    {
+      "label": "streetcar",
+      "score": "0.0250"
+    },
+    {
+      "label": "crane",
+      "score": "0.0199"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/287.jpg": [
+    {
+      "label": "aircraft_carrier",
+      "score": "0.2177"
+    },
+    {
+      "label": "fountain",
+      "score": "0.1449"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0506"
+    },
+    {
+      "label": "palace",
+      "score": "0.0347"
+    },
+    {
+      "label": "seashore",
+      "score": "0.0297"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/288.jpg": [
+    {
+      "label": "vending_machine",
+      "score": "0.6765"
+    },
+    {
+      "label": "thimble",
+      "score": "0.3064"
+    },
+    {
+      "label": "tobacco_shop",
+      "score": "0.0008"
+    },
+    {
+      "label": "lighter",
+      "score": "0.0006"
+    },
+    {
+      "label": "file",
+      "score": "0.0005"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/289.jpg": [
+    {
+      "label": "volcano",
+      "score": "0.8040"
+    },
+    {
+      "label": "alp",
+      "score": "0.0230"
+    },
+    {
+      "label": "killer_whale",
+      "score": "0.0044"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0031"
+    },
+    {
+      "label": "valley",
+      "score": "0.0025"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/29.jpg": [
+    {
+      "label": "volcano",
+      "score": "0.3196"
+    },
+    {
+      "label": "alp",
+      "score": "0.2327"
+    },
+    {
+      "label": "valley",
+      "score": "0.2085"
+    },
+    {
+      "label": "promontory",
+      "score": "0.0854"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0134"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/290.jpg": [
+    {
+      "label": "promontory",
+      "score": "0.5129"
+    },
+    {
+      "label": "cliff",
+      "score": "0.3456"
+    },
+    {
+      "label": "seashore",
+      "score": "0.0171"
+    },
+    {
+      "label": "volcano",
+      "score": "0.0042"
+    },
+    {
+      "label": "beacon",
+      "score": "0.0036"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/291.jpg": [
+    {
+      "label": "solar_dish",
+      "score": "0.2636"
+    },
+    {
+      "label": "beacon",
+      "score": "0.0594"
+    },
+    {
+      "label": "drilling_platform",
+      "score": "0.0347"
+    },
+    {
+      "label": "wreck",
+      "score": "0.0275"
+    },
+    {
+      "label": "space_shuttle",
+      "score": "0.0228"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/292.jpg": [
+    {
+      "label": "cheetah",
+      "score": "0.6357"
+    },
+    {
+      "label": "jaguar",
+      "score": "0.0291"
+    },
+    {
+      "label": "dingo",
+      "score": "0.0282"
+    },
+    {
+      "label": "gazelle",
+      "score": "0.0247"
+    },
+    {
+      "label": "leopard",
+      "score": "0.0224"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/293.jpg": [
+    {
+      "label": "ibex",
+      "score": "0.1062"
+    },
+    {
+      "label": "leopard",
+      "score": "0.0558"
+    },
+    {
+      "label": "hen-of-the-woods",
+      "score": "0.0383"
+    },
+    {
+      "label": "fox_squirrel",
+      "score": "0.0235"
+    },
+    {
+      "label": "lion",
+      "score": "0.0192"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/294.jpg": [
+    {
+      "label": "monitor",
+      "score": "0.0429"
+    },
+    {
+      "label": "beacon",
+      "score": "0.0285"
+    },
+    {
+      "label": "sea_snake",
+      "score": "0.0256"
+    },
+    {
+      "label": "desktop_computer",
+      "score": "0.0243"
+    },
+    {
+      "label": "space_shuttle",
+      "score": "0.0223"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/295.jpg": [
+    {
+      "label": "velvet",
+      "score": "0.0607"
+    },
+    {
+      "label": "beacon",
+      "score": "0.0350"
+    },
+    {
+      "label": "grey_whale",
+      "score": "0.0326"
+    },
+    {
+      "label": "geyser",
+      "score": "0.0290"
+    },
+    {
+      "label": "quill",
+      "score": "0.0211"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/296.jpg": [
+    {
+      "label": "geyser",
+      "score": "0.5498"
+    },
+    {
+      "label": "breastplate",
+      "score": "0.0459"
+    },
+    {
+      "label": "barrel",
+      "score": "0.0376"
+    },
+    {
+      "label": "velvet",
+      "score": "0.0229"
+    },
+    {
+      "label": "volcano",
+      "score": "0.0152"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/297.jpg": [
+    {
+      "label": "geyser",
+      "score": "0.0538"
+    },
+    {
+      "label": "screen",
+      "score": "0.0339"
+    },
+    {
+      "label": "printer",
+      "score": "0.0303"
+    },
+    {
+      "label": "notebook",
+      "score": "0.0292"
+    },
+    {
+      "label": "fountain",
+      "score": "0.0208"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/298.jpg": [
+    {
+      "label": "valley",
+      "score": "0.7477"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0948"
+    },
+    {
+      "label": "alp",
+      "score": "0.0557"
+    },
+    {
+      "label": "seashore",
+      "score": "0.0202"
+    },
+    {
+      "label": "promontory",
+      "score": "0.0100"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/299.jpg": [
+    {
+      "label": "hog",
+      "score": "0.1534"
+    },
+    {
+      "label": "worm_fence",
+      "score": "0.1412"
+    },
+    {
+      "label": "thresher",
+      "score": "0.1143"
+    },
+    {
+      "label": "bighorn",
+      "score": "0.0204"
+    },
+    {
+      "label": "alp",
+      "score": "0.0179"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/3.jpg": [
+    {
+      "label": "volcano",
+      "score": "0.5326"
+    },
+    {
+      "label": "alp",
+      "score": "0.1226"
+    },
+    {
+      "label": "space_shuttle",
+      "score": "0.0585"
+    },
+    {
+      "label": "mountain_tent",
+      "score": "0.0449"
+    },
+    {
+      "label": "valley",
+      "score": "0.0285"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/30.jpg": [
+    {
+      "label": "solar_dish",
+      "score": "0.1611"
+    },
+    {
+      "label": "steel_arch_bridge",
+      "score": "0.0727"
+    },
+    {
+      "label": "drilling_platform",
+      "score": "0.0492"
+    },
+    {
+      "label": "tripod",
+      "score": "0.0466"
+    },
+    {
+      "label": "mountain_tent",
+      "score": "0.0427"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/300.jpg": [
+    {
+      "label": "boathouse",
+      "score": "0.2676"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.1193"
+    },
+    {
+      "label": "beacon",
+      "score": "0.0441"
+    },
+    {
+      "label": "mobile_home",
+      "score": "0.0399"
+    },
+    {
+      "label": "seashore",
+      "score": "0.0352"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/31.jpg": [
+    {
+      "label": "yawl",
+      "score": "0.2163"
+    },
+    {
+      "label": "canoe",
+      "score": "0.1758"
+    },
+    {
+      "label": "suspension_bridge",
+      "score": "0.0486"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0388"
+    },
+    {
+      "label": "schooner",
+      "score": "0.0320"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/32.jpg": [
+    {
+      "label": "geyser",
+      "score": "0.7445"
+    },
+    {
+      "label": "seashore",
+      "score": "0.0997"
+    },
+    {
+      "label": "volcano",
+      "score": "0.0180"
+    },
+    {
+      "label": "promontory",
+      "score": "0.0137"
+    },
+    {
+      "label": "valley",
+      "score": "0.0077"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/33.jpg": [
+    {
+      "label": "geyser",
+      "score": "0.9501"
+    },
+    {
+      "label": "volcano",
+      "score": "0.0032"
+    },
+    {
+      "label": "valley",
+      "score": "0.0025"
+    },
+    {
+      "label": "fountain",
+      "score": "0.0008"
+    },
+    {
+      "label": "grey_whale",
+      "score": "0.0006"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/34.jpg": [
+    {
+      "label": "valley",
+      "score": "0.4246"
+    },
+    {
+      "label": "volcano",
+      "score": "0.3938"
+    },
+    {
+      "label": "alp",
+      "score": "0.0433"
+    },
+    {
+      "label": "promontory",
+      "score": "0.0068"
+    },
+    {
+      "label": "cliff",
+      "score": "0.0052"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/35.jpg": [
+    {
+      "label": "maze",
+      "score": "0.4746"
+    },
+    {
+      "label": "volcano",
+      "score": "0.0509"
+    },
+    {
+      "label": "valley",
+      "score": "0.0346"
+    },
+    {
+      "label": "giant_schnauzer",
+      "score": "0.0112"
+    },
+    {
+      "label": "alp",
+      "score": "0.0092"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/36.jpg": [
+    {
+      "label": "promontory",
+      "score": "0.2831"
+    },
+    {
+      "label": "seashore",
+      "score": "0.1518"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.1426"
+    },
+    {
+      "label": "valley",
+      "score": "0.0989"
+    },
+    {
+      "label": "alp",
+      "score": "0.0622"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/37.jpg": [
+    {
+      "label": "geyser",
+      "score": "0.9586"
+    },
+    {
+      "label": "volcano",
+      "score": "0.0050"
+    },
+    {
+      "label": "fountain",
+      "score": "0.0035"
+    },
+    {
+      "label": "steam_locomotive",
+      "score": "0.0008"
+    },
+    {
+      "label": "cliff",
+      "score": "0.0006"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/38.jpg": [
+    {
+      "label": "black_grouse",
+      "score": "0.3624"
+    },
+    {
+      "label": "snowmobile",
+      "score": "0.1628"
+    },
+    {
+      "label": "ptarmigan",
+      "score": "0.0926"
+    },
+    {
+      "label": "albatross",
+      "score": "0.0602"
+    },
+    {
+      "label": "prairie_chicken",
+      "score": "0.0414"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/39.jpg": [
+    {
+      "label": "lakeside",
+      "score": "0.2799"
+    },
+    {
+      "label": "valley",
+      "score": "0.1375"
+    },
+    {
+      "label": "steam_locomotive",
+      "score": "0.0672"
+    },
+    {
+      "label": "mobile_home",
+      "score": "0.0596"
+    },
+    {
+      "label": "passenger_car",
+      "score": "0.0331"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/4.jpg": [
+    {
+      "label": "fountain",
+      "score": "0.5374"
+    },
+    {
+      "label": "volcano",
+      "score": "0.1731"
+    },
+    {
+      "label": "grey_whale",
+      "score": "0.0398"
+    },
+    {
+      "label": "caldron",
+      "score": "0.0307"
+    },
+    {
+      "label": "gong",
+      "score": "0.0128"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/40.jpg": [
+    {
+      "label": "volcano",
+      "score": "0.7042"
+    },
+    {
+      "label": "valley",
+      "score": "0.1141"
+    },
+    {
+      "label": "alp",
+      "score": "0.0359"
+    },
+    {
+      "label": "plastic_bag",
+      "score": "0.0329"
+    },
+    {
+      "label": "sleeping_bag",
+      "score": "0.0139"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/41.jpg": [
+    {
+      "label": "valley",
+      "score": "0.4682"
+    },
+    {
+      "label": "alp",
+      "score": "0.2673"
+    },
+    {
+      "label": "promontory",
+      "score": "0.0619"
+    },
+    {
+      "label": "volcano",
+      "score": "0.0411"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0196"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/42.jpg": [
+    {
+      "label": "volcano",
+      "score": "0.7915"
+    },
+    {
+      "label": "geyser",
+      "score": "0.1898"
+    },
+    {
+      "label": "steam_locomotive",
+      "score": "0.0006"
+    },
+    {
+      "label": "projectile",
+      "score": "0.0005"
+    },
+    {
+      "label": "missile",
+      "score": "0.0003"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/43.jpg": [
+    {
+      "label": "Arabian_camel",
+      "score": "0.3380"
+    },
+    {
+      "label": "cheetah",
+      "score": "0.1038"
+    },
+    {
+      "label": "hyena",
+      "score": "0.0819"
+    },
+    {
+      "label": "gazelle",
+      "score": "0.0294"
+    },
+    {
+      "label": "Italian_greyhound",
+      "score": "0.0266"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/44.jpg": [
+    {
+      "label": "valley",
+      "score": "0.7029"
+    },
+    {
+      "label": "volcano",
+      "score": "0.0478"
+    },
+    {
+      "label": "alp",
+      "score": "0.0160"
+    },
+    {
+      "label": "electric_ray",
+      "score": "0.0101"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0077"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/45.jpg": [
+    {
+      "label": "promontory",
+      "score": "0.8036"
+    },
+    {
+      "label": "cliff",
+      "score": "0.0281"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0162"
+    },
+    {
+      "label": "seashore",
+      "score": "0.0157"
+    },
+    {
+      "label": "valley",
+      "score": "0.0155"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/46.jpg": [
+    {
+      "label": "worm_fence",
+      "score": "0.1589"
+    },
+    {
+      "label": "valley",
+      "score": "0.1513"
+    },
+    {
+      "label": "stone_wall",
+      "score": "0.0829"
+    },
+    {
+      "label": "park_bench",
+      "score": "0.0202"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0177"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/47.jpg": [
+    {
+      "label": "valley",
+      "score": "0.6732"
+    },
+    {
+      "label": "volcano",
+      "score": "0.1441"
+    },
+    {
+      "label": "alp",
+      "score": "0.0595"
+    },
+    {
+      "label": "promontory",
+      "score": "0.0191"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0160"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/48.jpg": [
+    {
+      "label": "volcano",
+      "score": "0.9411"
+    },
+    {
+      "label": "alp",
+      "score": "0.0285"
+    },
+    {
+      "label": "valley",
+      "score": "0.0062"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0015"
+    },
+    {
+      "label": "promontory",
+      "score": "0.0006"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/49.jpg": [
+    {
+      "label": "promontory",
+      "score": "0.1958"
+    },
+    {
+      "label": "geyser",
+      "score": "0.1953"
+    },
+    {
+      "label": "valley",
+      "score": "0.1417"
+    },
+    {
+      "label": "volcano",
+      "score": "0.1130"
+    },
+    {
+      "label": "alp",
+      "score": "0.0713"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/5.jpg": [
+    {
+      "label": "volcano",
+      "score": "0.1005"
+    },
+    {
+      "label": "seashore",
+      "score": "0.0695"
+    },
+    {
+      "label": "promontory",
+      "score": "0.0638"
+    },
+    {
+      "label": "valley",
+      "score": "0.0637"
+    },
+    {
+      "label": "umbrella",
+      "score": "0.0632"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/50.jpg": [
+    {
+      "label": "Irish_water_spaniel",
+      "score": "0.1210"
+    },
+    {
+      "label": "bow",
+      "score": "0.0548"
+    },
+    {
+      "label": "centipede",
+      "score": "0.0508"
+    },
+    {
+      "label": "nematode",
+      "score": "0.0369"
+    },
+    {
+      "label": "cliff",
+      "score": "0.0313"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/51.jpg": [
+    {
+      "label": "valley",
+      "score": "0.7503"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0386"
+    },
+    {
+      "label": "promontory",
+      "score": "0.0256"
+    },
+    {
+      "label": "seashore",
+      "score": "0.0156"
+    },
+    {
+      "label": "volcano",
+      "score": "0.0136"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/52.jpg": [
+    {
+      "label": "alp",
+      "score": "0.1219"
+    },
+    {
+      "label": "mountain_tent",
+      "score": "0.0590"
+    },
+    {
+      "label": "cloak",
+      "score": "0.0439"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0321"
+    },
+    {
+      "label": "valley",
+      "score": "0.0287"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/53.jpg": [
+    {
+      "label": "alp",
+      "score": "0.6494"
+    },
+    {
+      "label": "volcano",
+      "score": "0.1546"
+    },
+    {
+      "label": "valley",
+      "score": "0.0552"
+    },
+    {
+      "label": "mountain_tent",
+      "score": "0.0193"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0110"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/54.jpg": [
+    {
+      "label": "fountain",
+      "score": "0.0795"
+    },
+    {
+      "label": "trimaran",
+      "score": "0.0731"
+    },
+    {
+      "label": "catamaran",
+      "score": "0.0648"
+    },
+    {
+      "label": "missile",
+      "score": "0.0536"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0450"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/55.jpg": [
+    {
+      "label": "alp",
+      "score": "0.3508"
+    },
+    {
+      "label": "geyser",
+      "score": "0.3144"
+    },
+    {
+      "label": "snowmobile",
+      "score": "0.1542"
+    },
+    {
+      "label": "ski",
+      "score": "0.0392"
+    },
+    {
+      "label": "volcano",
+      "score": "0.0152"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/56.jpg": [
+    {
+      "label": "valley",
+      "score": "0.2221"
+    },
+    {
+      "label": "alp",
+      "score": "0.0936"
+    },
+    {
+      "label": "Indian_cobra",
+      "score": "0.0653"
+    },
+    {
+      "label": "bow",
+      "score": "0.0522"
+    },
+    {
+      "label": "worm_fence",
+      "score": "0.0393"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/57.jpg": [
+    {
+      "label": "volcano",
+      "score": "0.7351"
+    },
+    {
+      "label": "geyser",
+      "score": "0.0254"
+    },
+    {
+      "label": "alp",
+      "score": "0.0131"
+    },
+    {
+      "label": "promontory",
+      "score": "0.0125"
+    },
+    {
+      "label": "valley",
+      "score": "0.0109"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/58.jpg": [
+    {
+      "label": "alp",
+      "score": "0.8328"
+    },
+    {
+      "label": "valley",
+      "score": "0.0433"
+    },
+    {
+      "label": "volcano",
+      "score": "0.0173"
+    },
+    {
+      "label": "mountain_tent",
+      "score": "0.0131"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0046"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/59.jpg": [
+    {
+      "label": "valley",
+      "score": "0.7390"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0375"
+    },
+    {
+      "label": "promontory",
+      "score": "0.0321"
+    },
+    {
+      "label": "volcano",
+      "score": "0.0241"
+    },
+    {
+      "label": "geyser",
+      "score": "0.0094"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/6.jpg": [
+    {
+      "label": "cliff",
+      "score": "0.4636"
+    },
+    {
+      "label": "valley",
+      "score": "0.2813"
+    },
+    {
+      "label": "alp",
+      "score": "0.1086"
+    },
+    {
+      "label": "promontory",
+      "score": "0.0566"
+    },
+    {
+      "label": "volcano",
+      "score": "0.0049"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/60.jpg": [
+    {
+      "label": "lakeside",
+      "score": "0.7029"
+    },
+    {
+      "label": "valley",
+      "score": "0.0523"
+    },
+    {
+      "label": "park_bench",
+      "score": "0.0162"
+    },
+    {
+      "label": "pot",
+      "score": "0.0109"
+    },
+    {
+      "label": "book_jacket",
+      "score": "0.0108"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/61.jpg": [
+    {
+      "label": "valley",
+      "score": "0.3410"
+    },
+    {
+      "label": "alp",
+      "score": "0.3374"
+    },
+    {
+      "label": "guenon",
+      "score": "0.0112"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0082"
+    },
+    {
+      "label": "mountain_tent",
+      "score": "0.0082"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/62.jpg": [
+    {
+      "label": "valley",
+      "score": "0.2682"
+    },
+    {
+      "label": "alp",
+      "score": "0.2129"
+    },
+    {
+      "label": "volcano",
+      "score": "0.1216"
+    },
+    {
+      "label": "sandbar",
+      "score": "0.0828"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0658"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/63.jpg": [
+    {
+      "label": "seashore",
+      "score": "0.5152"
+    },
+    {
+      "label": "promontory",
+      "score": "0.2563"
+    },
+    {
+      "label": "breakwater",
+      "score": "0.0298"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0202"
+    },
+    {
+      "label": "cliff",
+      "score": "0.0149"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/64.jpg": [
+    {
+      "label": "lakeside",
+      "score": "0.4556"
+    },
+    {
+      "label": "boathouse",
+      "score": "0.2063"
+    },
+    {
+      "label": "pirate",
+      "score": "0.0414"
+    },
+    {
+      "label": "microwave",
+      "score": "0.0198"
+    },
+    {
+      "label": "rock_beauty",
+      "score": "0.0114"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/65.jpg": [
+    {
+      "label": "lakeside",
+      "score": "0.1643"
+    },
+    {
+      "label": "valley",
+      "score": "0.1296"
+    },
+    {
+      "label": "thatch",
+      "score": "0.0712"
+    },
+    {
+      "label": "volcano",
+      "score": "0.0706"
+    },
+    {
+      "label": "alp",
+      "score": "0.0491"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/66.jpg": [
+    {
+      "label": "Irish_water_spaniel",
+      "score": "0.2511"
+    },
+    {
+      "label": "nematode",
+      "score": "0.0432"
+    },
+    {
+      "label": "centipede",
+      "score": "0.0307"
+    },
+    {
+      "label": "bow",
+      "score": "0.0255"
+    },
+    {
+      "label": "hen-of-the-woods",
+      "score": "0.0254"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/67.jpg": [
+    {
+      "label": "valley",
+      "score": "0.4143"
+    },
+    {
+      "label": "promontory",
+      "score": "0.1162"
+    },
+    {
+      "label": "volcano",
+      "score": "0.0491"
+    },
+    {
+      "label": "alp",
+      "score": "0.0491"
+    },
+    {
+      "label": "ibex",
+      "score": "0.0286"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/68.jpg": [
+    {
+      "label": "seashore",
+      "score": "0.2970"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.1727"
+    },
+    {
+      "label": "alp",
+      "score": "0.1312"
+    },
+    {
+      "label": "promontory",
+      "score": "0.0326"
+    },
+    {
+      "label": "valley",
+      "score": "0.0281"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/69.jpg": [
+    {
+      "label": "alp",
+      "score": "0.3479"
+    },
+    {
+      "label": "valley",
+      "score": "0.2359"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.1083"
+    },
+    {
+      "label": "geyser",
+      "score": "0.0283"
+    },
+    {
+      "label": "promontory",
+      "score": "0.0158"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/7.jpg": [
+    {
+      "label": "volcano",
+      "score": "0.6052"
+    },
+    {
+      "label": "geyser",
+      "score": "0.2608"
+    },
+    {
+      "label": "promontory",
+      "score": "0.0028"
+    },
+    {
+      "label": "valley",
+      "score": "0.0026"
+    },
+    {
+      "label": "seashore",
+      "score": "0.0020"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/70.jpg": [
+    {
+      "label": "geyser",
+      "score": "0.9111"
+    },
+    {
+      "label": "volcano",
+      "score": "0.0159"
+    },
+    {
+      "label": "valley",
+      "score": "0.0031"
+    },
+    {
+      "label": "cliff",
+      "score": "0.0031"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0014"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/71.jpg": [
+    {
+      "label": "lakeside",
+      "score": "0.1151"
+    },
+    {
+      "label": "promontory",
+      "score": "0.0689"
+    },
+    {
+      "label": "killer_whale",
+      "score": "0.0485"
+    },
+    {
+      "label": "valley",
+      "score": "0.0412"
+    },
+    {
+      "label": "alp",
+      "score": "0.0318"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/72.jpg": [
+    {
+      "label": "lakeside",
+      "score": "0.4975"
+    },
+    {
+      "label": "valley",
+      "score": "0.1423"
+    },
+    {
+      "label": "promontory",
+      "score": "0.1028"
+    },
+    {
+      "label": "seashore",
+      "score": "0.0555"
+    },
+    {
+      "label": "dam",
+      "score": "0.0353"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/73.jpg": [
+    {
+      "label": "geyser",
+      "score": "0.3035"
+    },
+    {
+      "label": "dugong",
+      "score": "0.0360"
+    },
+    {
+      "label": "grey_whale",
+      "score": "0.0323"
+    },
+    {
+      "label": "tiger_shark",
+      "score": "0.0267"
+    },
+    {
+      "label": "fountain",
+      "score": "0.0253"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/74.jpg": [
+    {
+      "label": "alp",
+      "score": "0.8804"
+    },
+    {
+      "label": "valley",
+      "score": "0.0717"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0041"
+    },
+    {
+      "label": "mountain_tent",
+      "score": "0.0024"
+    },
+    {
+      "label": "volcano",
+      "score": "0.0022"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/75.jpg": [
+    {
+      "label": "alp",
+      "score": "0.7792"
+    },
+    {
+      "label": "valley",
+      "score": "0.0191"
+    },
+    {
+      "label": "grey_whale",
+      "score": "0.0111"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0099"
+    },
+    {
+      "label": "snowplow",
+      "score": "0.0090"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/76.jpg": [
+    {
+      "label": "Airedale",
+      "score": "0.1847"
+    },
+    {
+      "label": "Irish_terrier",
+      "score": "0.1199"
+    },
+    {
+      "label": "Lakeland_terrier",
+      "score": "0.1136"
+    },
+    {
+      "label": "Norwich_terrier",
+      "score": "0.0782"
+    },
+    {
+      "label": "otterhound",
+      "score": "0.0285"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/77.jpg": [
+    {
+      "label": "volcano",
+      "score": "0.4411"
+    },
+    {
+      "label": "geyser",
+      "score": "0.3161"
+    },
+    {
+      "label": "valley",
+      "score": "0.0194"
+    },
+    {
+      "label": "mountain_tent",
+      "score": "0.0147"
+    },
+    {
+      "label": "alp",
+      "score": "0.0136"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/78.jpg": [
+    {
+      "label": "valley",
+      "score": "0.4164"
+    },
+    {
+      "label": "volcano",
+      "score": "0.2503"
+    },
+    {
+      "label": "promontory",
+      "score": "0.1704"
+    },
+    {
+      "label": "seashore",
+      "score": "0.0317"
+    },
+    {
+      "label": "alp",
+      "score": "0.0213"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/79.jpg": [
+    {
+      "label": "maypole",
+      "score": "0.6223"
+    },
+    {
+      "label": "pirate",
+      "score": "0.1050"
+    },
+    {
+      "label": "schooner",
+      "score": "0.0634"
+    },
+    {
+      "label": "pole",
+      "score": "0.0389"
+    },
+    {
+      "label": "drilling_platform",
+      "score": "0.0205"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/8.jpg": [
+    {
+      "label": "ptarmigan",
+      "score": "0.4658"
+    },
+    {
+      "label": "water_ouzel",
+      "score": "0.1086"
+    },
+    {
+      "label": "black_grouse",
+      "score": "0.0730"
+    },
+    {
+      "label": "brambling",
+      "score": "0.0201"
+    },
+    {
+      "label": "prairie_chicken",
+      "score": "0.0179"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/80.jpg": [
+    {
+      "label": "fireboat",
+      "score": "0.1751"
+    },
+    {
+      "label": "barn_spider",
+      "score": "0.0982"
+    },
+    {
+      "label": "geyser",
+      "score": "0.0409"
+    },
+    {
+      "label": "gong",
+      "score": "0.0147"
+    },
+    {
+      "label": "steam_locomotive",
+      "score": "0.0137"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/81.jpg": [
+    {
+      "label": "valley",
+      "score": "0.3275"
+    },
+    {
+      "label": "volcano",
+      "score": "0.3004"
+    },
+    {
+      "label": "alp",
+      "score": "0.1489"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0108"
+    },
+    {
+      "label": "promontory",
+      "score": "0.0075"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/82.jpg": [
+    {
+      "label": "lakeside",
+      "score": "0.6478"
+    },
+    {
+      "label": "promontory",
+      "score": "0.0746"
+    },
+    {
+      "label": "valley",
+      "score": "0.0622"
+    },
+    {
+      "label": "sandbar",
+      "score": "0.0232"
+    },
+    {
+      "label": "alp",
+      "score": "0.0160"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/83.jpg": [
+    {
+      "label": "valley",
+      "score": "0.7142"
+    },
+    {
+      "label": "alp",
+      "score": "0.0905"
+    },
+    {
+      "label": "volcano",
+      "score": "0.0642"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0093"
+    },
+    {
+      "label": "promontory",
+      "score": "0.0072"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/84.jpg": [
+    {
+      "label": "valley",
+      "score": "0.3568"
+    },
+    {
+      "label": "volcano",
+      "score": "0.1516"
+    },
+    {
+      "label": "alp",
+      "score": "0.0398"
+    },
+    {
+      "label": "promontory",
+      "score": "0.0251"
+    },
+    {
+      "label": "ibex",
+      "score": "0.0198"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/85.jpg": [
+    {
+      "label": "alp",
+      "score": "0.6347"
+    },
+    {
+      "label": "valley",
+      "score": "0.1054"
+    },
+    {
+      "label": "maze",
+      "score": "0.0299"
+    },
+    {
+      "label": "mountain_bike",
+      "score": "0.0133"
+    },
+    {
+      "label": "cliff",
+      "score": "0.0120"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/86.jpg": [
+    {
+      "label": "valley",
+      "score": "0.3738"
+    },
+    {
+      "label": "geyser",
+      "score": "0.3217"
+    },
+    {
+      "label": "alp",
+      "score": "0.0488"
+    },
+    {
+      "label": "cliff",
+      "score": "0.0348"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0145"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/87.jpg": [
+    {
+      "label": "geyser",
+      "score": "0.9613"
+    },
+    {
+      "label": "volcano",
+      "score": "0.0217"
+    },
+    {
+      "label": "steam_locomotive",
+      "score": "0.0010"
+    },
+    {
+      "label": "alp",
+      "score": "0.0007"
+    },
+    {
+      "label": "valley",
+      "score": "0.0006"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/88.jpg": [
+    {
+      "label": "geyser",
+      "score": "0.1496"
+    },
+    {
+      "label": "fountain",
+      "score": "0.1353"
+    },
+    {
+      "label": "valley",
+      "score": "0.0946"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0368"
+    },
+    {
+      "label": "monastery",
+      "score": "0.0348"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/89.jpg": [
+    {
+      "label": "lakeside",
+      "score": "0.7513"
+    },
+    {
+      "label": "promontory",
+      "score": "0.0173"
+    },
+    {
+      "label": "boathouse",
+      "score": "0.0132"
+    },
+    {
+      "label": "valley",
+      "score": "0.0115"
+    },
+    {
+      "label": "worm_fence",
+      "score": "0.0087"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/9.jpg": [
+    {
+      "label": "volcano",
+      "score": "0.3300"
+    },
+    {
+      "label": "alp",
+      "score": "0.2398"
+    },
+    {
+      "label": "valley",
+      "score": "0.0668"
+    },
+    {
+      "label": "promontory",
+      "score": "0.0269"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0264"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/90.jpg": [
+    {
+      "label": "ruffed_grouse",
+      "score": "0.3404"
+    },
+    {
+      "label": "partridge",
+      "score": "0.1553"
+    },
+    {
+      "label": "ptarmigan",
+      "score": "0.1311"
+    },
+    {
+      "label": "frilled_lizard",
+      "score": "0.0521"
+    },
+    {
+      "label": "black_grouse",
+      "score": "0.0511"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/91.jpg": [
+    {
+      "label": "lakeside",
+      "score": "0.1777"
+    },
+    {
+      "label": "valley",
+      "score": "0.1313"
+    },
+    {
+      "label": "mountain_tent",
+      "score": "0.0872"
+    },
+    {
+      "label": "maze",
+      "score": "0.0444"
+    },
+    {
+      "label": "alp",
+      "score": "0.0277"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/92.jpg": [
+    {
+      "label": "valley",
+      "score": "0.4422"
+    },
+    {
+      "label": "geyser",
+      "score": "0.1062"
+    },
+    {
+      "label": "volcano",
+      "score": "0.0429"
+    },
+    {
+      "label": "cliff",
+      "score": "0.0295"
+    },
+    {
+      "label": "alp",
+      "score": "0.0096"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/93.jpg": [
+    {
+      "label": "geyser",
+      "score": "0.3524"
+    },
+    {
+      "label": "valley",
+      "score": "0.1832"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0809"
+    },
+    {
+      "label": "alp",
+      "score": "0.0587"
+    },
+    {
+      "label": "volcano",
+      "score": "0.0146"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/94.jpg": [
+    {
+      "label": "lakeside",
+      "score": "0.6487"
+    },
+    {
+      "label": "valley",
+      "score": "0.0517"
+    },
+    {
+      "label": "alp",
+      "score": "0.0488"
+    },
+    {
+      "label": "sandbar",
+      "score": "0.0097"
+    },
+    {
+      "label": "balloon",
+      "score": "0.0072"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/95.jpg": [
+    {
+      "label": "seashore",
+      "score": "0.4483"
+    },
+    {
+      "label": "promontory",
+      "score": "0.1810"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.1329"
+    },
+    {
+      "label": "sandbar",
+      "score": "0.0649"
+    },
+    {
+      "label": "cliff",
+      "score": "0.0216"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/96.jpg": [
+    {
+      "label": "lakeside",
+      "score": "0.4188"
+    },
+    {
+      "label": "alp",
+      "score": "0.2252"
+    },
+    {
+      "label": "valley",
+      "score": "0.0844"
+    },
+    {
+      "label": "promontory",
+      "score": "0.0463"
+    },
+    {
+      "label": "seashore",
+      "score": "0.0203"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/97.jpg": [
+    {
+      "label": "geyser",
+      "score": "0.2848"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.1745"
+    },
+    {
+      "label": "alp",
+      "score": "0.1394"
+    },
+    {
+      "label": "valley",
+      "score": "0.0992"
+    },
+    {
+      "label": "seashore",
+      "score": "0.0218"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/98.jpg": [
+    {
+      "label": "lakeside",
+      "score": "0.0569"
+    },
+    {
+      "label": "axolotl",
+      "score": "0.0363"
+    },
+    {
+      "label": "car_mirror",
+      "score": "0.0328"
+    },
+    {
+      "label": "worm_fence",
+      "score": "0.0275"
+    },
+    {
+      "label": "mobile_home",
+      "score": "0.0221"
+    }
+  ],
+  "Output_test_images/test_images_center_cropped/99.jpg": [
+    {
+      "label": "valley",
+      "score": "0.5234"
+    },
+    {
+      "label": "alp",
+      "score": "0.0635"
+    },
+    {
+      "label": "volcano",
+      "score": "0.0424"
+    },
+    {
+      "label": "lakeside",
+      "score": "0.0353"
+    },
+    {
+      "label": "worm_fence",
+      "score": "0.0265"
+    }
+  ]
+}
