@@ -16,6 +16,12 @@ const cameraController = {
 let controls;
 let currentMode = '3D';
 
+// Loading Progress Variables
+let totalAssetsToLoad = 0;
+let assetsLoaded = 0;
+let loadingOverlay;
+let loadingMessage;
+
 function initControls() {
     controls = new THREE.OrbitControls(camera, renderer.domElement);
     controls.enableDamping = true;
@@ -84,6 +90,20 @@ let showAxis = true;
 let axesHelper;
 let is3D = true;
 
+function updateLoadingProgress() {
+    assetsLoaded++;
+    const percentage = totalAssetsToLoad > 0 ? Math.round((assetsLoaded / totalAssetsToLoad) * 100) : 0;
+    if (loadingMessage) {
+        loadingMessage.textContent = `Loading ${percentage}%`;
+    }
+    if (assetsLoaded >= totalAssetsToLoad && loadingOverlay) {
+        // Ensure this runs after a very short delay to allow the final message to render if needed.
+        setTimeout(() => {
+            loadingOverlay.style.display = 'none';
+        }, 50); // Small delay
+    }
+}
+
 function loadImage(src) {
     return new Promise((resolve, reject) => {
         const image = new Image();
@@ -118,16 +138,27 @@ function loadVisualizationData() {
             jsonFile,
             data => {
                 imagePositions = JSON.parse(data);
+                updateLoadingProgress(); // Update progress for the loaded JSON file
                 resolve();
             },
             undefined,
-            reject
+            (error) => {
+                console.error("Error loading JSON data:", error);
+                updateLoadingProgress(); // Still update progress even on error to not hang the bar
+                reject(error);
+            }
         );
     });
 }
 
 async function switchVisualizationMode() {
     try {
+        if (loadingOverlay) loadingOverlay.style.display = 'flex';
+        assetsLoaded = 0;
+        // Total assets: 1 JSON + number of montage files
+        totalAssetsToLoad = 1 + montageFilePaths.length;
+        if (loadingMessage) loadingMessage.textContent = 'Loading 0%';
+
         currentMode = currentMode === '3D' ? '2D' : '3D';
         
         // Log the state before clearing
@@ -149,15 +180,12 @@ async function switchVisualizationMode() {
         is3D = currentMode === '3D';
         
         // Load new data
-        await loadVisualizationData();
+        await loadVisualizationData(); // Calls updateLoadingProgress for JSON
         console.log('Loaded image positions:', imagePositions.length);
         
         let accumulatedImageOffset = 0;
         for (const filePath of montageFilePaths) {
-            if (accumulatedImageOffset >= imagePositions.length) {
-                console.log("All image positions have been rendered during switch.");
-                break;
-            }
+            // createAndRenderPlanes will call updateLoadingProgress for each montage
             const renderedCount = await createAndRenderPlanes(filePath, montageTilesX, accumulatedImageOffset);
             accumulatedImageOffset += renderedCount;
         }
@@ -187,11 +215,21 @@ async function switchVisualizationMode() {
         needsUpdate = true;
     } catch (error) {
         console.error('Error switching visualization mode:', error);
+        if (loadingOverlay) loadingOverlay.style.display = 'none'; // Hide on error
     }
 }
 
 async function createAndRenderPlanes(imageSrc, planesPerRow = montageTilesX, imagePositionOffset = 0) {
-    const image = await loadImage(imageSrc);
+    let image;
+    try {
+        image = await loadImage(imageSrc);
+        updateLoadingProgress(); // Montage image file is loaded or load attempt finished
+    } catch (error) {
+        console.error(`Error loading image ${imageSrc}:`, error);
+        updateLoadingProgress(); // Still count as an "attempted" asset load for progress
+        return 0; // Failed to load image, render nothing from it
+    }
+    
     const chunkSize = montageTileResolution;
 
     const maxTilesInThisMontageFile = planesPerRow * montageTilesY;
@@ -278,18 +316,43 @@ function animate() {
 
 // Initial setup
 async function init() {
-    await loadVisualizationData();
+    // Get references to loading elements
+    loadingOverlay = document.getElementById('loading-overlay');
+    loadingMessage = document.getElementById('loading-message');
 
-    let accumulatedImageOffset = 0;
-    for (const filePath of montageFilePaths) {
-        if (accumulatedImageOffset >= imagePositions.length) {
-            console.log("All image positions have been rendered during init.");
-            break;
+    // Initialize progress
+    assetsLoaded = 0;
+    // Total assets: 1 JSON + number of montage files
+    totalAssetsToLoad = 1 + montageFilePaths.length;
+
+    if (loadingOverlay) {
+        loadingOverlay.style.display = 'flex'; // Show loading screen
+    }
+    if (loadingMessage) {
+        loadingMessage.textContent = 'Loading 0%';
+    }
+
+    try {
+        await loadVisualizationData(); // This will call updateLoadingProgress for the JSON
+
+        let accumulatedImageOffset = 0;
+        for (const filePath of montageFilePaths) {
+            // createAndRenderPlanes will call updateLoadingProgress for each montage
+            const renderedCount = await createAndRenderPlanes(filePath, montageTilesX, accumulatedImageOffset);
+            accumulatedImageOffset += renderedCount;
         }
-        const renderedCount = await createAndRenderPlanes(filePath, montageTilesX, accumulatedImageOffset);
-        accumulatedImageOffset += renderedCount;
+    } catch (error) {
+        console.error("Error during initial asset loading:", error);
+        if (loadingOverlay) {
+            loadingOverlay.style.display = 'none'; // Hide loading bar on critical error
+        }
+        // Optionally, display an error message to the user here
+        return; // Stop further initialization
     }
     
+    // All assets should be loaded by now, and updateLoadingProgress should have hidden the overlay
+    // if assetsLoaded >= totalAssetsToLoad.
+
     initControls();
     animate();
 }
