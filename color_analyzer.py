@@ -6,6 +6,7 @@ from collections import Counter
 import numpy as np
 from sklearn.decomposition import PCA
 from sklearn.preprocessing import StandardScaler
+import rasterfairy
 
 def get_dominant_color(image_path):
     """Opens an image and returns its most frequent color as an RGB tuple."""
@@ -147,9 +148,9 @@ def analyze_and_save_mean_colors(
         if mean_color_rgb: # Only include if color was successfully found for its resized version
             output_data_list.append({
                 "image": original_filename,
-                "x": mean_color_rgb[0], # R component
-                "y": mean_color_rgb[1], # G component
-                "z": mean_color_rgb[2]  # B component
+                "x": mean_color_rgb[0] , # R component, subtract 128
+                "y": mean_color_rgb[1] , # G component, subtract 128
+                "z": mean_color_rgb[2]  # B component, subtract 128
             })
             items_added_to_output += 1
         # else: # Optional: handle cases where mean color for the resized image was None
@@ -178,15 +179,16 @@ def analyze_and_save_mean_colors(
         print(f"Error saving output JSON to '{final_output_json_path}': {e}")
         return None, None # Return None for data and output_dir
 
-def save_pca_transformed_colors(mean_color_data_list, output_dir, pca_output_filename="images_color_rgb_2D.json"):
+def save_pca_transformed_colors(mean_color_data_list, output_dir, pca_output_filename="images_color_rgb_2D.json", grid_output_filename="images_color_rgb_2D_grid.json"):
     """
     Performs PCA on the mean color data and saves the 2D transformed data to a JSON file.
+    Then, assigns PCA points to a grid using rasterfairy and saves grid coordinates.
 
     Args:
         mean_color_data_list: List of dictionaries with original image filenames and mean RGB colors.
-                              (Output from analyze_and_save_mean_colors)
-        output_dir: The directory where the PCA output JSON file should be saved.
+        output_dir: The directory where the output JSON files should be saved.
         pca_output_filename: Name of the JSON file for PCA results.
+        grid_output_filename: Name of the JSON file for grid assignment results.
     """
     if not mean_color_data_list:
         print("No mean color data provided for PCA. Skipping PCA.")
@@ -271,9 +273,84 @@ def save_pca_transformed_colors(mean_color_data_list, output_dir, pca_output_fil
             json.dump(pca_output_list, f, indent=4)
         print(f"PCA transformed color data saved to '{final_pca_json_path}'")
         
+        # Call the new function to assign to grid and save
+        save_grid_assigned_coordinates(pca_transformed_data, image_filenames, output_dir, grid_output_filename)
+
     except Exception as e:
         print(f"Error during PCA transformation or saving: {e}")
 
+def save_grid_assigned_coordinates(pca_data, image_filenames, output_dir, grid_output_filename="images_color_rgb_2D_grid.json"):
+    """
+    Assigns 2D PCA points to a grid using rasterfairy and saves the grid coordinates.
+
+    Args:
+        pca_data (np.ndarray): Array of 2D PCA transformed coordinates.
+        image_filenames (list): List of original image filenames, corresponding to pca_data rows.
+        output_dir (str): The directory where the grid output JSON file should be saved.
+        grid_output_filename (str): Name of the JSON file for grid assignment results.
+    """
+    if pca_data is None or len(pca_data) == 0:
+        print("No PCA data provided for grid assignment. Skipping.")
+        return
+    
+    if len(pca_data) != len(image_filenames):
+        print("Mismatch between PCA data count and image filename count. Skipping grid assignment.")
+        return
+
+    print(f"Starting grid assignment for {len(pca_data)} points...")
+
+    try:
+        n_samples = pca_data.shape[0]
+        if n_samples == 0:
+            print("No samples in PCA data for grid assignment.")
+            return
+            
+        nx_int = int(np.ceil(n_samples**0.5)) # Use ceil to ensure enough cells
+        ny_int = int(np.ceil(n_samples / nx_int))
+        if nx_int == 0 or ny_int == 0 : # handle case with 1 point
+            nx_int = 1
+            ny_int = 1
+
+        print(f"Target grid dimensions: {nx_int}x{ny_int}")
+
+        # Rasterfairy might return a tuple (grid_points, grid_size) or just grid_points
+        # Based on notebook: grid_assignment = rasterfairy.transformPointCloud2D(coordinates, target=(nx_int, ny_int))
+        # And then grid_assignment[0] is used.
+        grid_assignment_result = rasterfairy.transformPointCloud2D(pca_data, target=(nx_int, ny_int))
+        
+        # Check if the result is a tuple and take the first element if so
+        if isinstance(grid_assignment_result, tuple) and len(grid_assignment_result) > 0:
+            assigned_grid_coords = grid_assignment_result[0]
+        else:
+            assigned_grid_coords = grid_assignment_result # Assume it directly returns the array
+
+        if not isinstance(assigned_grid_coords, np.ndarray) or assigned_grid_coords.shape[0] != n_samples or assigned_grid_coords.shape[1] != 2:
+            print(f"Error: rasterfairy.transformPointCloud2D did not return the expected array format. Got: {type(assigned_grid_coords)}")
+            if isinstance(assigned_grid_coords, np.ndarray):
+                print(f"Shape: {assigned_grid_coords.shape}")
+            return
+
+        grid_output_list = []
+        for i, filename in enumerate(image_filenames):
+            grid_output_list.append({
+                "image": filename,
+                "grid_x": int(assigned_grid_coords[i, 0]), # Ensure integer coords for grid
+                "grid_y": int(assigned_grid_coords[i, 1])
+            })
+            
+        final_grid_json_path = os.path.join(output_dir, grid_output_filename)
+        with open(final_grid_json_path, 'w') as f:
+            json.dump(grid_output_list, f, indent=4)
+        print(f"Grid assigned coordinate data saved to '{final_grid_json_path}'")
+        
+    except NameError as ne:
+        if 'rasterfairy' in str(ne) or 'Prime' in str(ne):
+            print("Error: Rasterfairy library is likely not installed correctly or has internal errors (e.g., 'Prime' not defined).")
+            print("Please check your Rasterfairy installation.")
+        else:
+            print(f"A NameError occurred during grid assignment: {ne}")
+    except Exception as e:
+        print(f"Error during grid assignment or saving: {e}")
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(
@@ -306,6 +383,13 @@ if __name__ == '__main__':
         help="Name for the output JSON file storing 2D PCA transformed mean colors (default: images_color_rgb_2D.json). "
              "This file will also be saved in the same directory as the --metadata_json file."
     )
+    parser.add_argument(
+        "--grid_output_json",
+        type=str,
+        default="images_color_rgb_2D_grid.json",
+        help="Name for the output JSON file storing rasterfairy grid-assigned coordinates (default: images_color_rgb_2D_grid.json). "
+             "This file will also be saved in the same directory as the --metadata_json file."
+    )
 
     args = parser.parse_args()
 
@@ -320,7 +404,8 @@ if __name__ == '__main__':
         save_pca_transformed_colors(
             mean_color_data_list=mean_color_data,
             output_dir=out_dir,
-            pca_output_filename=args.pca_output_json
+            pca_output_filename=args.pca_output_json,
+            grid_output_filename=args.grid_output_json
         )
     else:
         print("Skipping PCA transformation due to issues in mean color analysis.")
