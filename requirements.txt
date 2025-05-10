@@ -1,1 +1,2 @@
 git@github.com:Quasimondo/RasterFairy.git
+scikit-learn

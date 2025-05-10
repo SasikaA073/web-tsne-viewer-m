@@ -5,3 +5,4 @@ python functions/inception_v3_google-1a9a5a14.pth
 micoo/*
 images/*
 output/images/*
+output/*
