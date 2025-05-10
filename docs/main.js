@@ -66,6 +66,17 @@ const montageTilesX = 15;         // Number of tiles horizontally in the montage
 const montageTilesY = 15;         // Number of tiles vertically in the montage
 const montageTileResolution = 128; // Resolution of each tile (e.g., 128 for 128x128 pixels)
 
+const montageFilePaths = [
+    './atlas_images/montage_0.png',
+    './atlas_images/montage_1.png',
+    './atlas_images/montage_2.png',
+    './atlas_images/montage_3.png',
+    './atlas_images/montage_4.png',
+    './atlas_images/montage_5.png',
+    './atlas_images/montage_6.png',
+    
+];
+
 let imagePositions = [];
 let spaceBetweenTiles = 0.1;
 let needsUpdate = true;
@@ -141,7 +152,15 @@ async function switchVisualizationMode() {
         await loadVisualizationData();
         console.log('Loaded image positions:', imagePositions.length);
         
-        await createAndRenderPlanes('./atlas_images/montage_0.png', montageTilesX);
+        let accumulatedImageOffset = 0;
+        for (const filePath of montageFilePaths) {
+            if (accumulatedImageOffset >= imagePositions.length) {
+                console.log("All image positions have been rendered during switch.");
+                break;
+            }
+            const renderedCount = await createAndRenderPlanes(filePath, montageTilesX, accumulatedImageOffset);
+            accumulatedImageOffset += renderedCount;
+        }
         
         // Log the final state
         console.log('After rendering - Scene children:', scene.children.length);
@@ -171,14 +190,27 @@ async function switchVisualizationMode() {
     }
 }
 
-async function createAndRenderPlanes(imageSrc, planesPerRow = montageTilesX) {
+async function createAndRenderPlanes(imageSrc, planesPerRow = montageTilesX, imagePositionOffset = 0) {
     const image = await loadImage(imageSrc);
     const chunkSize = montageTileResolution;
 
-    const numImagesInMontage = montageTilesX * montageTilesY;
-    const numImagesToRender = Math.min(imagePositions.length, numImagesInMontage);
+    const maxTilesInThisMontageFile = planesPerRow * montageTilesY;
+    // Number of images to render from this montage, constrained by available positions and what's in the montage file
+    const imagesToProcessForThisMontage = Math.min(imagePositions.length - imagePositionOffset, maxTilesInThisMontageFile);
 
-    for (let i = 0; i < numImagesToRender; i++) {
+    if (imagesToProcessForThisMontage <= 0) {
+        console.warn(`No images to process for ${imageSrc} with offset ${imagePositionOffset} or imagePositions exhausted.`);
+        return 0; // No images rendered from this montage
+    }
+
+    for (let i = 0; i < imagesToProcessForThisMontage; i++) {
+        const dataIndex = imagePositionOffset + i;
+        // Safety check, though Math.min should prevent this for imagePositions.length
+        if (dataIndex >= imagePositions.length) {
+            console.warn(`Attempted to access imagePosition out of bounds: ${dataIndex} while processing ${imageSrc}.`);
+            break;
+        }
+        
         const row = Math.floor(i / planesPerRow);
         const col = i % planesPerRow;
         const x = col * chunkSize;
@@ -186,15 +218,16 @@ async function createAndRenderPlanes(imageSrc, planesPerRow = montageTilesX) {
         
         const texture = getChunkedTexture(image, x, y);
         const position = {
-            x: imagePositions[i].x * spaceBetweenTiles,
-            y: imagePositions[i].y * spaceBetweenTiles,
-            z: is3D ? imagePositions[i].z * spaceBetweenTiles : 0
+            x: imagePositions[dataIndex].x * spaceBetweenTiles,
+            y: imagePositions[dataIndex].y * spaceBetweenTiles,
+            z: is3D ? imagePositions[dataIndex].z * spaceBetweenTiles : 0
         };
 
         createPlane(texture, position);
     }
     needsUpdate = true;
     updateAxesHelper();
+    return imagesToProcessForThisMontage; // Return how many images were actually processed/rendered from imagePositions
 }
 
 function updatePlanePositions() {
@@ -246,7 +279,17 @@ function animate() {
 // Initial setup
 async function init() {
     await loadVisualizationData();
-    await createAndRenderPlanes('atlas_images/montage_0.png', montageTilesX);
+
+    let accumulatedImageOffset = 0;
+    for (const filePath of montageFilePaths) {
+        if (accumulatedImageOffset >= imagePositions.length) {
+            console.log("All image positions have been rendered during init.");
+            break;
+        }
+        const renderedCount = await createAndRenderPlanes(filePath, montageTilesX, accumulatedImageOffset);
+        accumulatedImageOffset += renderedCount;
+    }
+    
     initControls();
     animate();
 }
