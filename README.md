@@ -4,6 +4,10 @@ This project provides a two-step pipeline to process a collection of images:
 1.  **Image Processing & Montage Creation**: Resizes images, generates one or more montages, and creates a JSON metadata file.
 2.  **Dominant Color Analysis**: Analyzes the resized images to find their most frequent color and saves this information to a new JSON file.
 
+![2D visualization of images arranged by color similarity](2D.png)
+*2D visualization of images arranged by color similarity*
+
+
 ## Table of Contents
 
 - [Image Montage and Color Analyzer](#image-montage-and-color-analyzer)
