@@ -1,3 +1,5 @@
+const scalar_ = 100;
+
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 camera.position.z = 25;
@@ -59,6 +61,11 @@ const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 
+// Montage and Tile Configuration
+const montageTilesX = 15;         // Number of tiles horizontally in the montage
+const montageTilesY = 15;         // Number of tiles vertically in the montage
+const montageTileResolution = 128; // Resolution of each tile (e.g., 128 for 128x128 pixels)
+
 let imagePositions = [];
 let spaceBetweenTiles = 0.1;
 let needsUpdate = true;
@@ -75,7 +82,7 @@ function loadImage(src) {
     });
 }
 
-function getChunkedTexture(image, x, y, chunkSize = 128) {
+function getChunkedTexture(image, x, y, chunkSize = montageTileResolution) {
     const canvas = document.createElement('canvas');
     canvas.width = chunkSize;
     canvas.height = chunkSize;
@@ -94,7 +101,7 @@ function createPlane(texture, position) {
 }
 
 function loadVisualizationData() {
-    const jsonFile = is3D ? 'atlas_images/tsne_img_3D_coords.json' : 'atlas_images/tsne_img_2D_coords.json';
+    const jsonFile = is3D ? 'atlas_images/images_color_rgb.json' : 'atlas_images/images_color_rgb_2D.json';
     return new Promise((resolve, reject) => {
         new THREE.FileLoader().load(
             jsonFile,
@@ -134,7 +141,7 @@ async function switchVisualizationMode() {
         await loadVisualizationData();
         console.log('Loaded image positions:', imagePositions.length);
         
-        await createAndRenderPlanes('./atlas_images/test_images-img-atlas.jpg');
+        await createAndRenderPlanes('./atlas_images/montage_0.png', montageTilesX);
         
         // Log the final state
         console.log('After rendering - Scene children:', scene.children.length);
@@ -164,11 +171,14 @@ async function switchVisualizationMode() {
     }
 }
 
-async function createAndRenderPlanes(imageSrc, planesPerRow = 20) {
+async function createAndRenderPlanes(imageSrc, planesPerRow = montageTilesX) {
     const image = await loadImage(imageSrc);
-    const chunkSize = 128;
+    const chunkSize = montageTileResolution;
 
-    for (let i = 0; i < 300; i++) {
+    const numImagesInMontage = montageTilesX * montageTilesY;
+    const numImagesToRender = Math.min(imagePositions.length, numImagesInMontage);
+
+    for (let i = 0; i < numImagesToRender; i++) {
         const row = Math.floor(i / planesPerRow);
         const col = i % planesPerRow;
         const x = col * chunkSize;
@@ -192,9 +202,9 @@ function updatePlanePositions() {
         // Check if child is a mesh AND if imagePositions[index] exists
         if (child instanceof THREE.Mesh && imagePositions[index]) {
             const position = {
-                x: imagePositions[index].x * spaceBetweenTiles,
-                y: imagePositions[index].y * spaceBetweenTiles,
-                z: is3D ? imagePositions[index].z * spaceBetweenTiles : 0
+                x: imagePositions[index].x * spaceBetweenTiles * scalar_,
+                y: imagePositions[index].y * spaceBetweenTiles * scalar_,
+                z: is3D ? imagePositions[index].z * spaceBetweenTiles * scalar_ : 0
             };
             child.position.set(position.x, position.y, position.z);
         }
@@ -236,7 +246,7 @@ function animate() {
 // Initial setup
 async function init() {
     await loadVisualizationData();
-    await createAndRenderPlanes('atlas_images/test_images-img-atlas.jpg');
+    await createAndRenderPlanes('atlas_images/montage_0.png', montageTilesX);
     initControls();
     animate();
 }
