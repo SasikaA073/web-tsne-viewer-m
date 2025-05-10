@@ -76,56 +76,68 @@ def analyze_and_save_dominant_colors(
         print("No image metadata found in the JSON file.")
         return
     
-    # The image_processor.py saves resized images in a subfolder (default "images")
-    # We need to find this subfolder. We can assume it's the one referenced in metadata, 
-    # or more robustly, derive it if possible or require it as an arg.
-    # For now, let's try to get it from the first metadata entry if paths are absolute.
-    # A better approach might be to require the specific resized images folder path.
-
-    # Let's assume the `resized_images_subfolder_name` is 'images' as per previous script default
-    # Or, we could try to be smarter if paths in JSON are absolute.
-    # For now, this script assumes the resized images are directly in a subfolder *of* `resized_images_base_folder`,
-    # and that subfolder's name is part of the path in `resized_full_path` in the JSON.
-    # To simplify, we will assume `resized_images_base_folder` IS the folder containing the actual image files.
-
     print(f"Analyzing images from folder: '{resized_images_base_folder}'")
-    image_colors_map = {}
-    processed_count = 0
-    failed_count = 0
 
-    # Using a set to avoid processing the same image multiple times if it appears in multiple montages
-    # but the metadata points to the same resized file.
-    unique_resized_filenames = set()
+    # Step 1: Collect all unique resized filenames and calculate their dominant colors once.
+    unique_resized_filenames_from_metadata = set()
     for item in metadata_list:
         if "resized_filename" in item:
-            unique_resized_filenames.add(item["resized_filename"])
-        # If using full path, this would be:
-        # if "resized_full_path" in item:
-        #     unique_resized_full_paths.add(item["resized_full_path"])
+            unique_resized_filenames_from_metadata.add(item["resized_filename"])
 
-    print(f"Found {len(unique_resized_filenames)} unique resized images in metadata to process.")
+    if not unique_resized_filenames_from_metadata:
+        print("No resized filenames found in metadata. Cannot proceed.")
+        return
+        
+    print(f"Found {len(unique_resized_filenames_from_metadata)} unique resized image files referenced in metadata.")
 
-    for resized_filename in unique_resized_filenames:
-        # Construct the full path to the resized image
-        # Assumes `resized_images_base_folder` is the directory containing the resized images
-        # (e.g., .../output_dir/images/)
+    resized_image_dominant_color_cache = {} # Cache: {resized_filename: [R,G,B] or None}
+    processed_for_color_count = 0
+    failed_to_get_color_count = 0
+
+    for resized_filename in unique_resized_filenames_from_metadata:
         image_full_path = os.path.join(resized_images_base_folder, resized_filename)
-        
-        print(f"Processing: {resized_filename}")
+        # print(f"Calculating dominant color for: {resized_filename}") # Can be verbose
         dominant_color = get_dominant_color(image_full_path)
-        
         if dominant_color:
-            # Convert to list [R, G, B] for JSON serialization if it's a tuple
-            image_colors_map[resized_filename] = list(dominant_color) 
-            processed_count += 1
+            resized_image_dominant_color_cache[resized_filename] = list(dominant_color) 
+            processed_for_color_count += 1
         else:
-            failed_count +=1
-            image_colors_map[resized_filename] = None # Indicate failure for this image
-    
-    print(f"Successfully processed {processed_count} images. Failed to process {failed_count} images.")
+            resized_image_dominant_color_cache[resized_filename] = None # Mark as failed
+            failed_to_get_color_count +=1
+            
+    print(f"Successfully calculated dominant colors for {processed_for_color_count} unique resized images.")
+    if failed_to_get_color_count > 0:
+        print(f"Failed to determine dominant color for {failed_to_get_color_count} unique resized images.")
 
-    if not image_colors_map:
-        print("No dominant colors were extracted. Output JSON will not be created.")
+    # Step 2: Create the final list of dictionaries in the desired format.
+    output_data_list = []
+    items_added_to_output = 0
+    for item in metadata_list:
+        original_filename = item.get("original_filename")
+        resized_filename = item.get("resized_filename")
+
+        if not original_filename or not resized_filename:
+            print(f"Warning: Skipping metadata item due to missing original or resized filename: {item}")
+            continue
+            
+        # Get the pre-calculated dominant color from our cache
+        dominant_color_rgb = resized_image_dominant_color_cache.get(resized_filename)
+
+        if dominant_color_rgb: # Only include if color was successfully found for its resized version
+            output_data_list.append({
+                "image": original_filename,
+                "x": dominant_color_rgb[0], # R component
+                "y": dominant_color_rgb[1], # G component
+                "z": dominant_color_rgb[2]  # B component
+            })
+            items_added_to_output += 1
+        # else: # Optional: handle cases where dominant color for the resized image was None
+            # print(f"Dominant color for {resized_filename} (original: {original_filename}) not found or failed. Not adding to output.")
+
+    print(f"Added {items_added_to_output} entries to the final JSON output list.")
+
+    if not output_data_list:
+        print("No data to save after processing. Output JSON will not be created.")
         return
 
     # Output JSON will be saved in the same directory as the metadata_json_path by default
@@ -138,7 +150,7 @@ def analyze_and_save_dominant_colors(
 
     try:
         with open(final_output_json_path, 'w') as f:
-            json.dump(image_colors_map, f, indent=4)
+            json.dump(output_data_list, f, indent=4)
         print(f"Dominant color data saved to '{final_output_json_path}'")
     except Exception as e:
         print(f"Error saving output JSON to '{final_output_json_path}': {e}")
