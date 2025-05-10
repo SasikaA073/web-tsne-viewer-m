@@ -6,224 +6,40 @@
     <title>TSNE viewer for Image Datasets</title>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/controls/OrbitControls.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
 
-    <link rel="icon" href="https://cdn.sstatic.net/Sites/dsp/Img/apple-touch-icon@2.png?v=e0439310c223">
+	<!-- favicon icon https://cdn.sstatic.net/Sites/dsp/Img/apple-touch-icon@2.png?v=e0439310c223-->
+	<link rel="icon" href="https://cdn.sstatic.net/Sites/dsp/Img/apple-touch-icon@2.png?v=e0439310c223">
     <link rel="stylesheet" href="styles.css">
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     
-    <style>
-        :root {
-            --primary-color: #2196F3;
-            --text-color: #ffffff;
-            --background-color: #1a1a1a;
-            --overlay-color: rgba(0, 0, 0, 0.8);
-            --spacing-unit: 1rem;
-        }
-
-        body {
-            margin: 0;
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: var(--background-color);
-            color: var(--text-color);
-        }
-
-        #loading-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: var(--overlay-color);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-        }
-
-        #loading-message {
-            margin-top: var(--spacing-unit);
-            font-size: 1.1rem;
-            font-weight: 500;
-            color: var(--text-color);
-        }
-
-        .slider-container {
-            position: fixed;
-            top: 0;
-            right: 0;
-            width: 300px;
-            background: rgba(0, 0, 0, 0.85);
-            backdrop-filter: blur(10px);
-            padding: calc(var(--spacing-unit) * 2);
-            border-left: 1px solid rgba(255, 255, 255, 0.1);
-            height: 100vh;
-            overflow-y: auto;
-        }
-
-        .slider-container h2 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: calc(var(--spacing-unit) * 2);
-            line-height: 1.4;
-            color: var(--text-color);
-        }
-
-        .slider {
-            display: flex;
-            align-items: center;
-            margin-bottom: calc(var(--spacing-unit) * 1.5);
-            padding: var(--spacing-unit);
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 8px;
-            transition: background 0.3s ease;
-        }
-
-        .slider:hover {
-            background: rgba(255, 255, 255, 0.1);
-        }
-
-        .slider svg {
-            margin-right: var(--spacing-unit);
-            opacity: 0.7;
-        }
-
-        .slider input[type="range"] {
-            flex: 1;
-            height: 4px;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 2px;
-            outline: none;
-            -webkit-appearance: none;
-        }
-
-        .slider input[type="range"]::-webkit-slider-thumb {
-            -webkit-appearance: none;
-            width: 16px;
-            height: 16px;
-            background: var(--primary-color);
-            border-radius: 50%;
-            cursor: pointer;
-            transition: transform 0.2s ease;
-        }
-
-        .slider input[type="range"]::-webkit-slider-thumb:hover {
-            transform: scale(1.2);
-        }
-
-        .slider span {
-            margin-left: var(--spacing-unit);
-            font-size: 0.9rem;
-            opacity: 0.8;
-            min-width: 80px;
-        }
-
-        #toggle2D3DButton {
-            background: var(--primary-color);
-            color: white;
-            border: none;
-            padding: 8px 16px;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 0.9rem;
-            font-weight: 500;
-            transition: transform 0.2s ease, background 0.2s ease;
-        }
-
-        #toggle2D3DButton:hover {
-            transform: translateY(-1px);
-            background: #1976D2;
-        }
-
-        .footer {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background: rgba(0, 0, 0, 0.85);
-            backdrop-filter: blur(10px);
-            padding: calc(var(--spacing-unit) * 1.5);
-            text-align: center;
-            font-size: 0.9rem;
-            line-height: 1.6;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .footer a {
-            color: var(--primary-color);
-            text-decoration: none;
-            transition: color 0.2s ease;
-        }
-
-        .footer a:hover {
-            color: #90CAF9;
-        }
-
-        /* Spinner Animation */
-        .spinner {
-            width: 40px;
-            height: 40px;
-            position: relative;
-        }
-
-        .spinner-blade {
-            position: absolute;
-            left: 44.5%;
-            top: 37%;
-            width: 10%;
-            height: 25%;
-            background-color: var(--primary-color);
-            border-radius: 50%/20%;
-            animation: spinner-blade 1s linear infinite;
-            transform-origin: 50% 100%;
-        }
-
-        @keyframes spinner-blade {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        .spinner-blade:nth-child(1) { animation-delay: -1.66667s; transform: rotate(30deg); }
-        .spinner-blade:nth-child(2) { animation-delay: -1.58333s; transform: rotate(60deg); }
-        .spinner-blade:nth-child(3) { animation-delay: -1.5s; transform: rotate(90deg); }
-        .spinner-blade:nth-child(4) { animation-delay: -1.41667s; transform: rotate(120deg); }
-        .spinner-blade:nth-child(5) { animation-delay: -1.33333s; transform: rotate(150deg); }
-        .spinner-blade:nth-child(6) { animation-delay: -1.25s; transform: rotate(180deg); }
-        .spinner-blade:nth-child(7) { animation-delay: -1.16667s; transform: rotate(210deg); }
-        .spinner-blade:nth-child(8) { animation-delay: -1.08333s; transform: rotate(240deg); }
-        .spinner-blade:nth-child(9) { animation-delay: -1s; transform: rotate(270deg); }
-        .spinner-blade:nth-child(10) { animation-delay: -0.91667s; transform: rotate(300deg); }
-        .spinner-blade:nth-child(11) { animation-delay: -0.83333s; transform: rotate(330deg); }
-        .spinner-blade:nth-child(12) { animation-delay: -0.75s; transform: rotate(360deg); }
-    </style>
 </head>
 <body>
-    <div id="loading-overlay">
-        <div class="spinner">
-            <div class="spinner-blade"></div>
-            <div class="spinner-blade"></div>
-            <div class="spinner-blade"></div>
-            <div class="spinner-blade"></div>
-            <div class="spinner-blade"></div>
-            <div class="spinner-blade"></div>
-            <div class="spinner-blade"></div>
-            <div class="spinner-blade"></div>
-            <div class="spinner-blade"></div>
-            <div class="spinner-blade"></div>
-            <div class="spinner-blade"></div>
-            <div class="spinner-blade"></div>
-        </div>
-        <div id="loading-message">Loading 0%</div>
+<div id="loading-overlay">
+    
+    <div class="spinner center" font="white">
+        <div class="spinner-blade"></div>
+        <div class="spinner-blade"></div>
+        <div class="spinner-blade"></div>
+        <div class="spinner-blade"></div>
+        <div class="spinner-blade"></div>
+        <div class="spinner-blade"></div>
+        <div class="spinner-blade"></div>
+        <div class="spinner-blade"></div>
+        <div class="spinner-blade"></div>
+        <div class="spinner-blade"></div>
+        <div class="spinner-blade"></div>
+        <div class="spinner-blade"></div>
     </div>
-
+    <div id="loading-message">Loading 0%</div>
+</div>
     <script type="module" src="main.js"></script>
     
     <div class="slider-container">
-        <h2>Mapping Image Datasets by Visual Similarity Using Machine Learning</h2>
+	    
+		<h2>Mapping Image Datasets by Visual<br> Similarity Using Machine Learning</h2>
+
 
         <div class="slider">
             <svg viewBox="0 0 24 24" width="24" height="24">
@@ -232,63 +48,67 @@
             <button id="toggle2D3DButton" class="mode-toggle">Switch to 2D</button>
         </div>
 
-        <div class="slider">
-            <svg viewBox="0 0 24 24" width="24" height="24">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" fill="currentColor"></path>
-            </svg>
-            <input type="range" id="cameraXSlider" min="-50" max="50" step="0.1" value="0">
-            <span>Camera X</span>
-        </div>
 
-        <div class="slider">
-            <svg viewBox="0 0 24 24" width="24" height="24">
-                <path d="M19 13H5v-2h14v2z" fill="currentColor"></path>
-            </svg>
-            <input type="range" id="cameraYSlider" min="-50" max="50" step="0.1" value="0">
-            <span>Camera Y</span>
-        </div>
+        <!-- camera position -->
+        <!-- Camera Controls -->
+<div class="slider">
+    <svg viewBox="0 0 24 24" width="24" height="24">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" fill="currentColor"></path>
+    </svg>
+    <input type="range" id="cameraXSlider" min="-50" max="50" step="0.1" value="0">
+    <span>Camera X</span>
+</div>
 
-        <div class="slider">
-            <svg viewBox="0 0 24 24" width="24" height="24">
-                <path d="M12 4c4.41 0 8 3.59 8 8s-3.59 8-8 8-8-3.59-8-8 3.59-8 8-8zm0-2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" fill="currentColor"></path>
-            </svg>
-            <input type="range" id="cameraZSlider" min="0" max="100" step="0.1" value="25">
-            <span>Camera Z</span>
-        </div>
+<div class="slider">
+    <svg viewBox="0 0 24 24" width="24" height="24">
+        <path d="M19 13H5v-2h14v2z" fill="currentColor"></path>
+    </svg>
+    <input type="range" id="cameraYSlider" min="-50" max="50" step="0.1" value="0">
+    <span>Camera Y</span>
+</div>
 
-        <div class="slider">
-            <svg viewBox="0 0 24 24" width="24" height="24">
-                <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" fill="currentColor"></path>
-            </svg>
-            <label for="toggleAxesCheckbox" style="display: flex; align-items: center;">
-                <input type="checkbox" id="toggleAxesCheckbox" style="margin-right: 8px;">
-                <span>Show Axes</span>
-            </label>
-        </div>
+<div class="slider">
+    <svg viewBox="0 0 24 24" width="24" height="24">
+        <path d="M12 4c4.41 0 8 3.59 8 8s-3.59 8-8 8-8-3.59-8-8 3.59-8 8-8zm0-2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" fill="currentColor"></path>
+    </svg>
+    <input type="range" id="cameraZSlider" min="0" max="100" step="0.1" value="25">
+    <span>Camera Z</span>
+</div>
 
-        <div class="slider">
+<div class="slider" style="align-items: center;">
+    <svg viewBox="0 0 24 24" width="24" height="24">
+        <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" fill="currentColor"></path>
+    </svg>
+    <label for="toggleAxesCheckbox" style="display: flex; align-items: center; margin-left: 10px;">
+        <input type="checkbox" id="toggleAxesCheckbox" style="margin-right: 8px;"> Show Axes
+    </label>
+</div>
+
+        
+
+        <label class="slider">
             <svg viewBox="0 0 24 24" width="24" height="24">
                 <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" fill="currentColor"></path>
             </svg>
             <input type="range" id="zoomSlider" min="1" max="10" step="1" value="1">
             <span>Camera Zoom</span>
-        </div>
+        </label>
         
-        <div class="slider">
+        <label class="slider">
             <svg viewBox="0 0 24 24" width="24" height="24">
                 <path d="M3 15v4c0 1.1.9 2 2 2h4v-2H5v-4H3zm2-9H3v4h2V6zm14 9h-2v4h-4v2h4c1.1 0 2-.9 2-2v-4zm0-11h-4v2h4v4h2V6c0-1.1-.9-2-2-2z" fill="currentColor"></path>
             </svg>
             <input type="range" id="spaceBetweenTilesSlider" min="0.1" max="1" step="0.05" value="0.5">
             <span>Space Between Tiles</span>
-        </div>
+        </label>
     </div>
 
     <div class="footer">
-       
+        More feature embeddings coming soon!
         <br>
         Developed by <a href="https://sasikaa073.github.io/">Sasika Amarasinghe</a> | <a href="credits.html">Credits</a>
         <br>
-        Inspired by <a href="https://artsexperiments.withgoogle.com/tsnemap/">Google Arts Experiments TSNE viewer</a>
+        Inspired by <a href="https://artsexperiments.withgoogle.com/tsnemap/"> Google Arts Experiments TSNE viewer</a>
     </div>
 </body>
 </html>
