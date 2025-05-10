@@ -1,6 +1,7 @@
 import os
 import json
 from PIL import Image, UnidentifiedImageError
+import argparse
 
 def create_image_montage(
     input_folder_path: str,
@@ -181,106 +182,40 @@ def create_image_montage(
     print("Processing complete.")
 
 if __name__ == '__main__':
-    # Example usage:
-    # Create dummy folders and images for testing
-    print("Setting up a dummy test environment...")
-    if not os.path.exists("sample_input_images"):
-        os.makedirs("sample_input_images")
-    if not os.path.exists("sample_output_data"):
-        os.makedirs("sample_output_data")
-
-    # Create a few dummy images (requires Pillow to create, or you can place your own)
-    try:
-        # Test case 1: More images than fit in one montage
-        print("\n--- Test Case 1: Multiple Montages ---")
-        num_total_images_case1 = 10
-        grid_size_case1 = (2,2) # 4 images per montage
-        input_dir_case1 = "sample_input_images_multi"
-        output_dir_case1 = "sample_output_data_multi"
-
-        if os.path.exists(input_dir_case1):
-            import shutil
-            shutil.rmtree(input_dir_case1)
-        os.makedirs(input_dir_case1)
-        if os.path.exists(output_dir_case1):
-            import shutil
-            shutil.rmtree(output_dir_case1)
-        os.makedirs(output_dir_case1)
-
-        for i in range(num_total_images_case1): 
-            img = Image.new('RGB', (60, 40), color = (i*20, i*15, i*25))
-            img.save(os.path.join(input_dir_case1, f"multi_test_image_{i+1}.png"))
-        print(f"Dummy images for multi-montage test created in '{input_dir_case1}'.")
-        
-        create_image_montage(
-            input_folder_path=input_dir_case1,
-            output_folder_path=output_dir_case1,
-            resized_images_subfolder_name="resized_imgs",
-            montage_filename="multi_montage.png", # Base name
-            json_metadata_filename="multi_montage_info.json",
-            target_resolution=(50, 50),
-            montage_grid_size=grid_size_case1 
-        )
-
-        # Test case 2: Fewer images than grid (original test)
-        print("\n--- Test Case 2: Single Montage (Fewer Images than Grid) ---")
-        input_dir_case2 = "sample_input_images_single_small"
-        output_dir_case2 = "sample_output_data_single_small"
-        if os.path.exists(input_dir_case2):
-            import shutil
-            shutil.rmtree(input_dir_case2)
-        os.makedirs(input_dir_case2)
-        if os.path.exists(output_dir_case2):
-            import shutil
-            shutil.rmtree(output_dir_case2)
-        os.makedirs(output_dir_case2)
-
-        img = Image.new('RGB', (100,100), color='blue')
-        img.save(os.path.join(input_dir_case2, "small_img1.png"))
-        img = Image.new('RGB', (100,100), color='red')
-        img.save(os.path.join(input_dir_case2, "small_img2.png"))
-        print(f"Dummy images for single-small-montage test created in '{input_dir_case2}'.")
-        create_image_montage(
-            input_folder_path=input_dir_case2,
-            output_folder_path=output_dir_case2,
-            montage_grid_size=(2,2) # 2x2 grid, but only 2 images
-        )
-
-        # Test case 3: Exact number of images for one montage
-        print("\n--- Test Case 3: Single Montage (Exact Fit) ---")
-        num_total_images_case3 = 4
-        grid_size_case3 = (2,2) # 4 images per montage
-        input_dir_case3 = "sample_input_images_exact"
-        output_dir_case3 = "sample_output_data_exact"
-
-        if os.path.exists(input_dir_case3):
-            import shutil
-            shutil.rmtree(input_dir_case3)
-        os.makedirs(input_dir_case3)
-        if os.path.exists(output_dir_case3):
-            import shutil
-            shutil.rmtree(output_dir_case3)
-        os.makedirs(output_dir_case3)
-
-        for i in range(num_total_images_case3): 
-            img = Image.new('RGB', (70, 70), color = (100+i*10, 50+i*20, 200-i*15))
-            img.save(os.path.join(input_dir_case3, f"exact_test_image_{i+1}.jpg"))
-        print(f"Dummy images for exact-fit-montage test created in '{input_dir_case3}'.")
-        
-        create_image_montage(
-            input_folder_path=input_dir_case3,
-            output_folder_path=output_dir_case3,
-            montage_filename="exact_montage.tiff", # Test different extension
-            json_metadata_filename="exact_montage_data.json",
-            target_resolution=(64, 64),
-            montage_grid_size=grid_size_case3 
-        )
-
-
-    except ImportError:
-        print("Pillow library is not installed. Cannot create dummy images for the example.")
-    except Exception as e:
-        print(f"An error occurred during the example setup or run: {e}")
+    parser = argparse.ArgumentParser(
+        description="Create image montages from a folder of images. "
+                    "Resizes images, generates one or more montages, "
+                    "and creates a JSON metadata file."
+    )
+    parser.add_argument(
+        "--input_dir", 
+        type=str, 
+        help="Path to the folder containing the original images."
+    )
+    parser.add_argument(
+        "--output_dir", 
+        type=str, 
+        help="Path to the base directory where all outputs (resized images, montages, JSON) will be stored."
+    )
     
-    print("\nTo use this script, replace the example 'input_folder_path' and 'output_folder_path'")
-    print("with your actual directories in the if __name__ == '__main__': block or call the function from another script.") 
+    parser.add_argument("--montage_cols", type=int, default=15, help="Number of columns in the montage grid.")
+    parser.add_argument("--montage_rows", type=int, default=15, help="Number of rows in the montage grid.")
+    parser.add_argument("--img_width", type=int, default=128, help="Target width for resized images.")
+    parser.add_argument("--img_height", type=int, default=128, help="Target height for resized images.")
+
+    args = parser.parse_args()
+
+    print(f"Starting image processing...")
+    print(f"Input folder: {args.input_dir}")
+    print(f"Output folder: {args.output_dir}")
+
+    create_image_montage(
+        input_folder_path=args.input_dir,
+        output_folder_path=args.output_dir
+        # You can pass other arguments here if you added them to the parser
+        # For example, if you added --montage_cols and --montage_rows:
+        # montage_grid_size=(args.montage_cols, args.montage_rows),
+        # target_resolution=(args.img_width, args.img_height),
+    )
+
+    print("\nScript finished.") 
