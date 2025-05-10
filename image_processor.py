@@ -7,7 +7,7 @@ def create_image_montage(
     input_folder_path: str,
     output_folder_path: str,
     resized_images_subfolder_name: str = "images",
-    montage_filename: str = "montage.png",
+    montage_filename: str = "montage.jpg",
     json_metadata_filename: str = "montage_metadata.json",
     target_resolution: tuple[int, int] = (128, 128),
     montage_grid_size: tuple[int, int] = (15, 15)
@@ -22,7 +22,7 @@ def create_image_montage(
         input_folder_path: Path to the folder containing original images.
         output_folder_path: Path to the base directory where all outputs will be stored.
         resized_images_subfolder_name: Name of the subfolder for resized images (default: "images").
-        montage_filename: Filename for the output montage image (default: "montage.png").
+        montage_filename: Filename for the output montage image (default: "montage.jpg").
         json_metadata_filename: Filename for the JSON metadata (default: "montage_metadata.json").
         target_resolution: Tuple (width, height) for resizing images (default: (128, 128)).
         montage_grid_size: Tuple (columns, rows) for the montage grid (default: (15, 15)).
@@ -66,7 +66,7 @@ def create_image_montage(
             
             original_basename, original_ext = os.path.splitext(os.path.basename(original_path))
             # Ensure resized images are saved in a common format like PNG for consistency in montage
-            resized_filename = f"{original_basename}_resized_{i}.png" 
+            resized_filename = f"{original_basename}_resized_{i}.jpg" 
             resized_path = os.path.join(resized_images_dir, resized_filename)
             
             img_resized.save(resized_path)
@@ -99,7 +99,7 @@ def create_image_montage(
 
     base_montage_filename, montage_ext = os.path.splitext(montage_filename)
     if not montage_ext: # Ensure there's an extension, default to .png
-        montage_ext = ".png"
+        montage_ext = ".jpg"
         print(f"Warning: Montage filename '{montage_filename}' had no extension. Defaulting to '{montage_ext}'.")
 
 
@@ -211,11 +211,9 @@ if __name__ == '__main__':
 
     create_image_montage(
         input_folder_path=args.input_dir,
-        output_folder_path=args.output_dir
-        # You can pass other arguments here if you added them to the parser
-        # For example, if you added --montage_cols and --montage_rows:
-        # montage_grid_size=(args.montage_cols, args.montage_rows),
-        # target_resolution=(args.img_width, args.img_height),
+        output_folder_path=args.output_dir,
+        montage_grid_size=(args.montage_cols, args.montage_rows),
+        target_resolution=(args.img_width, args.img_height),
     )
 
     print("\nScript finished.") 

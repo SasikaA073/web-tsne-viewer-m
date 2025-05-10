@@ -1,9 +1,9 @@
 // Montage and Tile Configuration
 const montageTilesX = 15;         // Number of tiles horizontally in the montage
 const montageTilesY = 15;         // Number of tiles vertically in the montage
-const montageTileResolution = 128; // Resolution of each tile (e.g., 128 for 128x128 pixels)
+const montageTileResolution = 256; // Resolution of each tile (e.g., 128 for 128x128 pixels)
 
-const scalar_ = 100;
+const scalar_ = 1;
 
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
@@ -149,7 +149,7 @@ async function discoverMontageFiles() {
     const discoveredFiles = [];
     
     for (let i = 0; i < maxAttempts; i++) {
-        const path = `./atlas_images/montage_${i}.png`;
+        const path = `./atlas_images/montage_${i}.jpg`;
         try {
             // Attempt to load the image
             await loadImage(path);

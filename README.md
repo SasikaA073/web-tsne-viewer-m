@@ -86,7 +86,7 @@ python image_processor.py --input_dir <path_to_original_images> --output_dir <pa
 If your original images are in a folder named `images` within your project root, and you want the output to go into a folder named `output`:
 
 ```bash
-python image_processor.py --input_dir images --output_dir output
+python image_processor.py --input_dir images --output_dir output --montage_cols 15 --montage_rows 15 --img_width 256 --img_height 256
 ```
 
 **Optional Arguments for `image_processor.py`:**
@@ -121,7 +121,7 @@ python color_analyzer.py --resized_images_dir <path_to_resized_images_folder> --
 Assuming the output from Step 1 was to the `output` directory:
 
 ```bash
-python color_analyzer.py --resized_images_dir output/images --metadata_json output/montage_metadata.json
+python color_analyzer.py --resized_images_dir output/images --metadata_json output/montage_metadata.json --output_json dominant_colors.json
 ```
 
 **Optional Arguments for `color_analyzer.py`:**
@@ -148,10 +148,15 @@ This will create:
     ]
     ```
 
+```bash
+rm -r output/images
+mv output atlas_images
+mv atlas_images docs/
+```
+
 ## Script Details
 
 ### `image_processor.py`
-
 *   **Input**: A folder containing original images.
 *   **Processing**:
     *   Reads image files (PNG, JPG, JPEG, BMP, GIF, TIFF).
@@ -175,3 +180,4 @@ This will create:
     *   It maps the original image filename to its dominant RGB color.
 *   **Output**:
     *   A JSON file (default `images_color_rgb.json`) containing a list of dictionaries. Each dictionary holds the original image filename and its dominant color as `{"image": "name.jpg", "x": R, "y": G, "z": B}`.
+
