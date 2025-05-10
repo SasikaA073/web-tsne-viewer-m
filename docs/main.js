@@ -1,3 +1,8 @@
+// Montage and Tile Configuration
+const montageTilesX = 15;         // Number of tiles horizontally in the montage
+const montageTilesY = 15;         // Number of tiles vertically in the montage
+const montageTileResolution = 128; // Resolution of each tile (e.g., 128 for 128x128 pixels)
+
 const scalar_ = 100;
 
 const scene = new THREE.Scene();
@@ -21,6 +26,8 @@ let totalAssetsToLoad = 0;
 let assetsLoaded = 0;
 let loadingOverlay;
 let loadingMessage;
+
+let montageFilePaths = [];
 
 function initControls() {
     controls = new THREE.OrbitControls(camera, renderer.domElement);
@@ -67,21 +74,6 @@ const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 
-// Montage and Tile Configuration
-const montageTilesX = 15;         // Number of tiles horizontally in the montage
-const montageTilesY = 15;         // Number of tiles vertically in the montage
-const montageTileResolution = 128; // Resolution of each tile (e.g., 128 for 128x128 pixels)
-
-const montageFilePaths = [
-    './atlas_images/montage_0.png',
-    './atlas_images/montage_1.png',
-    './atlas_images/montage_2.png',
-    './atlas_images/montage_3.png',
-    './atlas_images/montage_4.png',
-    './atlas_images/montage_5.png',
-    './atlas_images/montage_6.png',
-    
-];
 
 let imagePositions = [];
 let spaceBetweenTiles = 0.1;
@@ -151,11 +143,34 @@ function loadVisualizationData() {
     });
 }
 
+// Add this async function to discover montage files
+async function discoverMontageFiles() {
+    const maxAttempts = 20; // Maximum number of montage files to check for
+    const discoveredFiles = [];
+    
+    for (let i = 0; i < maxAttempts; i++) {
+        const path = `./atlas_images/montage_${i}.png`;
+        try {
+            // Attempt to load the image
+            await loadImage(path);
+            discoveredFiles.push(path);
+        } catch (error) {
+            // Stop searching if we get 2 consecutive errors (in case of temporary network issues)
+            if (i > 0 && !discoveredFiles.length) break;
+            if (i > discoveredFiles.length + 2) break;
+        }
+    }
+    return discoveredFiles;
+}
+
 async function switchVisualizationMode() {
     try {
+        // Rediscover montage files on each mode switch
+        montageFilePaths = await discoverMontageFiles();
+        console.log('Found montage files:', montageFilePaths);
+        
         if (loadingOverlay) loadingOverlay.style.display = 'flex';
         assetsLoaded = 0;
-        // Total assets: 1 JSON + number of montage files
         totalAssetsToLoad = 1 + montageFilePaths.length;
         if (loadingMessage) loadingMessage.textContent = 'Loading 0%';
 
@@ -316,6 +331,10 @@ function animate() {
 
 // Initial setup
 async function init() {
+    // Discover montage files first
+    montageFilePaths = await discoverMontageFiles();
+    console.log('Found montage files:', montageFilePaths);
+
     // Get references to loading elements
     loadingOverlay = document.getElementById('loading-overlay');
     loadingMessage = document.getElementById('loading-message');
