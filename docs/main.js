@@ -172,7 +172,7 @@ async function discoverMontageFiles() {
     return discoveredFiles;
 }
 
-async function switchVisualizationMode() {
+async function switchVisualizationMode(newMode) {
     try {
         // Rediscover montage files on each mode switch
         montageFilePaths = await discoverMontageFiles();
@@ -183,16 +183,7 @@ async function switchVisualizationMode() {
         totalAssetsToLoad = 1 + montageFilePaths.length;
         if (loadingMessage) loadingMessage.textContent = 'Loading 0%';
 
-        // Determine the new currentMode based on the existing currentMode
-        let newCurrentModeValue;
-        if (currentMode === '3D') {
-            newCurrentModeValue = '2D';
-        } else if (currentMode === '2D') {
-            newCurrentModeValue = '2D_GRID';
-        } else { // currentMode was '2D_GRID' (or an unexpected state, defaulting to 3D)
-            newCurrentModeValue = '3D';
-        }
-        currentMode = newCurrentModeValue; // Update global currentMode
+        currentMode = newMode; // Update to new mode directly
         
         // Log the state before clearing
         console.log('Before clearing - Scene children:', scene.children.length);
@@ -210,15 +201,14 @@ async function switchVisualizationMode() {
         // Log the state after clearing
         console.log('After clearing - Scene children:', scene.children.length);
         
-        is3D = currentMode === '3D'; // Update global is3D based on the *new* currentMode
+        is3D = currentMode === '3D';
         
         // Load new data
-        await loadVisualizationData(); // This uses the updated currentMode
+        await loadVisualizationData();
         console.log('Loaded image positions:', imagePositions.length);
         
         let accumulatedImageOffset = 0;
         for (const filePath of montageFilePaths) {
-            // createAndRenderPlanes will call updateLoadingProgress for each montage
             const renderedCount = await createAndRenderPlanes(filePath, montageTilesX, accumulatedImageOffset);
             accumulatedImageOffset += renderedCount;
         }
@@ -226,39 +216,23 @@ async function switchVisualizationMode() {
         // Log the final state
         console.log('After rendering - Scene children:', scene.children.length);
         
-        // Update camera and controls based on the new currentMode
         if (currentMode === '3D') {
             camera.position.set(currentCameraPos.x, currentCameraPos.y, currentCameraPos.z);
             controls.minPolarAngle = 0;
             controls.maxPolarAngle = Math.PI;
-        } else { // Covers '2D' and '2D_GRID' modes
+        } else {
             camera.position.set(0, 0, 50);
-            controls.minPolarAngle = 0; 
-            controls.maxPolarAngle = Math.PI / 2; // Using original 2D settings
+            controls.minPolarAngle = 0;
+            controls.maxPolarAngle = Math.PI / 2;
         }
         
         camera.lookAt(0, 0, 0);
         camera.updateProjectionMatrix();
         controls.update();
         
-        const button = document.getElementById('toggle2D3DButton');
-        if (button) {
-            // Determine button text based on the *new* currentMode, showing the *next* mode on click
-            let buttonTextNextModeDisplay;
-            if (currentMode === '3D') {
-                buttonTextNextModeDisplay = '2D';
-            } else if (currentMode === '2D') {
-                buttonTextNextModeDisplay = '2D Grid'; // User-friendly name for the button
-            } else { // currentMode is '2D_GRID'
-                buttonTextNextModeDisplay = '3D';
-            }
-            button.textContent = `Switch to ${buttonTextNextModeDisplay}`;
-        }
-        
-        needsUpdate = true;
     } catch (error) {
         console.error('Error switching visualization mode:', error);
-        if (loadingOverlay) loadingOverlay.style.display = 'none'; // Hide on error
+        if (loadingOverlay) loadingOverlay.style.display = 'none';
     }
 }
 
@@ -376,6 +350,158 @@ function animate() {
     }
 }
 
+// Create and add the mode selector with radio buttons
+function createModeSelector() {
+    const sliderContainer = document.querySelector('.slider-container');
+    if (!sliderContainer) {
+        console.error('.slider-container not found. Cannot add mode selector.');
+        return;
+    }
+
+    // Create the main div for this control, styled like other sliders
+    const modeControlDiv = document.createElement('div');
+    modeControlDiv.classList.add('slider');
+    // Dark theme styling
+    modeControlDiv.style.backgroundColor = 'rgba(40, 40, 40, 0.7)';
+    modeControlDiv.style.border = '1px solid rgba(70, 70, 70, 0.5)';
+    modeControlDiv.style.borderRadius = '5px';
+    modeControlDiv.style.padding = '15px';
+    modeControlDiv.style.marginTop = '15px';
+    modeControlDiv.style.marginBottom = '15px';
+    modeControlDiv.style.boxShadow = '0 2px 4px rgba(0, 0, 0, 0.2)';
+    modeControlDiv.style.color = 'white';
+    // Change to vertical layout
+    modeControlDiv.style.display = 'flex';
+    modeControlDiv.style.flexDirection = 'column';
+
+    // 1. Title Span
+    const titleSpan = document.createElement('span');
+    titleSpan.textContent = 'Visualization Mode:';
+    titleSpan.style.marginBottom = '15px';
+    titleSpan.style.fontWeight = 'bold';
+    titleSpan.style.color = 'white';
+    titleSpan.style.fontSize = '16px';
+    modeControlDiv.appendChild(titleSpan);
+
+    // 2. Radio Buttons Group - now vertical
+    const radioGroup = document.createElement('div');
+    radioGroup.style.display = 'flex';
+    radioGroup.style.flexDirection = 'column';
+    radioGroup.style.gap = '10px'; // Space between vertical options
+    
+    const modes = [
+        { value: '3D', label: '3D View' },
+        { value: '2D', label: '2D View' },
+        { value: '2D_GRID', label: 'Grid View' }
+    ];
+
+    modes.forEach(modeInfo => {
+        // Create a container for each option
+        const optionContainer = document.createElement('div');
+        optionContainer.style.backgroundColor = 'rgba(30, 30, 30, 0.7)';
+        optionContainer.style.borderRadius = '4px';
+        optionContainer.style.padding = '2px';
+        optionContainer.style.transition = 'all 0.2s';
+        
+        // Create the radio label inside the container
+        const radioLabel = document.createElement('label');
+        radioLabel.style.cursor = 'pointer';
+        radioLabel.style.display = 'flex';
+        radioLabel.style.alignItems = 'center';
+        radioLabel.style.padding = '10px 15px';
+        radioLabel.style.width = '100%';
+        radioLabel.style.color = 'white';
+        radioLabel.style.boxSizing = 'border-box';
+        
+        // Radio input
+        const radioInput = document.createElement('input');
+        radioInput.type = 'radio';
+        radioInput.name = 'visualizationMode';
+        radioInput.id = `mode-radio-${modeInfo.value}`;
+        radioInput.value = modeInfo.value;
+        radioInput.checked = currentMode === modeInfo.value;
+        radioInput.style.marginRight = '12px';
+        radioInput.style.cursor = 'pointer';
+        radioInput.style.accentColor = '#4285f4'; // Blue accent color for selected radio
+
+        // Text span
+        const textSpan = document.createElement('span');
+        textSpan.textContent = modeInfo.label;
+        textSpan.style.flex = '1';
+        
+        // Highlight the selected mode's container
+        if (radioInput.checked) {
+            optionContainer.style.backgroundColor = 'rgba(66, 133, 244, 0.3)';
+            optionContainer.style.boxShadow = '0 0 0 1px rgba(66, 133, 244, 0.5)';
+            textSpan.style.fontWeight = 'bold';
+        }
+
+        // Hover effects - applied to the container
+        optionContainer.addEventListener('mouseenter', () => {
+            if (!document.getElementById(`mode-radio-${modeInfo.value}`).checked) {
+                optionContainer.style.backgroundColor = 'rgba(80, 80, 80, 0.5)';
+            } else {
+                // Even on the selected item, give some hover feedback
+                optionContainer.style.backgroundColor = 'rgba(66, 133, 244, 0.4)';
+            }
+        });
+        
+        optionContainer.addEventListener('mouseleave', () => {
+            if (!document.getElementById(`mode-radio-${modeInfo.value}`).checked) {
+                optionContainer.style.backgroundColor = 'rgba(30, 30, 30, 0.7)';
+            } else {
+                optionContainer.style.backgroundColor = 'rgba(66, 133, 244, 0.3)';
+            }
+        });
+
+        // Change event
+        radioInput.addEventListener('change', () => {
+            if (radioInput.checked) {
+                // Update all containers when selection changes
+                document.querySelectorAll('[name="visualizationMode"]').forEach(input => {
+                    const label = input.parentElement;
+                    const container = label.parentElement;
+                    const textElement = label.querySelector('span');
+                    
+                    if (input.checked) {
+                        container.style.backgroundColor = 'rgba(66, 133, 244, 0.3)';
+                        container.style.boxShadow = '0 0 0 1px rgba(66, 133, 244, 0.5)';
+                        textElement.style.fontWeight = 'bold';
+                    } else {
+                        container.style.backgroundColor = 'rgba(30, 30, 30, 0.7)';
+                        container.style.boxShadow = 'none';
+                        textElement.style.fontWeight = 'normal';
+                    }
+                });
+                
+                switchVisualizationMode(modeInfo.value);
+            }
+        });
+
+        // Assemble the label
+        radioLabel.appendChild(radioInput);
+        radioLabel.appendChild(textSpan);
+        
+        // Put the label in the container
+        optionContainer.appendChild(radioLabel);
+        
+        // Add the option container to the radio group
+        radioGroup.appendChild(optionContainer);
+    });
+    
+    modeControlDiv.appendChild(radioGroup);
+
+    // Insert the new mode control div into the sliderContainer, after the H2 element
+    const h2Element = sliderContainer.querySelector('h2');
+    if (h2Element && h2Element.nextSibling) {
+        sliderContainer.insertBefore(modeControlDiv, h2Element.nextSibling);
+    } else if (h2Element) {
+        sliderContainer.appendChild(modeControlDiv);
+    } else {
+        sliderContainer.prepend(modeControlDiv);
+    }
+}
+
 // Initial setup
 async function init() {
     // Discover montage files first
@@ -388,38 +514,33 @@ async function init() {
 
     // Initialize progress
     assetsLoaded = 0;
-    // Total assets: 1 JSON + number of montage files
     totalAssetsToLoad = 1 + montageFilePaths.length;
 
     if (loadingOverlay) {
-        loadingOverlay.style.display = 'flex'; // Show loading screen
+        loadingOverlay.style.display = 'flex';
     }
     if (loadingMessage) {
         loadingMessage.textContent = 'Loading 0%';
     }
 
     try {
-        await loadVisualizationData(); // This will call updateLoadingProgress for the JSON
+        await loadVisualizationData();
 
         let accumulatedImageOffset = 0;
         for (const filePath of montageFilePaths) {
-            // createAndRenderPlanes will call updateLoadingProgress for each montage
             const renderedCount = await createAndRenderPlanes(filePath, montageTilesX, accumulatedImageOffset);
             accumulatedImageOffset += renderedCount;
         }
     } catch (error) {
         console.error("Error during initial asset loading:", error);
         if (loadingOverlay) {
-            loadingOverlay.style.display = 'none'; // Hide loading bar on critical error
+            loadingOverlay.style.display = 'none';
         }
-        // Optionally, display an error message to the user here
-        return; // Stop further initialization
+        return;
     }
-    
-    // All assets should be loaded by now, and updateLoadingProgress should have hidden the overlay
-    // if assetsLoaded >= totalAssetsToLoad.
 
     initControls();
+    createModeSelector(); // Add mode selector
     animate();
 }
 
@@ -447,8 +568,5 @@ toggleAxesCheckbox.addEventListener('change', function () {
     showAxis = toggleAxesCheckbox.checked;
     updateAxesHelper();
 });
-
-// Add event listener for 2D/3D toggle button
-document.getElementById('toggle2D3DButton').addEventListener('click', switchVisualizationMode);
 
 init();
