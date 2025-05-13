@@ -124,7 +124,16 @@ function createPlane(texture, position) {
 }
 
 function loadVisualizationData() {
-    const jsonFile = is3D ? 'atlas_images/images_color_rgb.json' : 'atlas_images/images_color_rgb_2D.json';
+    let jsonFile;
+    // Determine the JSON file based on the current mode
+    if (currentMode === '3D') {
+        jsonFile = 'atlas_images/images_color_rgb.json';
+    } else if (currentMode === '2D_GRID') { // Assumes '2D_GRID' as a new mode value
+        jsonFile = 'atlas_images/images_color_rgb_2D_grid.json';
+    } else { // Default to original 2D mode (e.g., currentMode === '2D')
+        jsonFile = 'atlas_images/images_color_rgb_2D.json';
+    }
+
     return new Promise((resolve, reject) => {
         new THREE.FileLoader().load(
             jsonFile,
@@ -174,7 +183,16 @@ async function switchVisualizationMode() {
         totalAssetsToLoad = 1 + montageFilePaths.length;
         if (loadingMessage) loadingMessage.textContent = 'Loading 0%';
 
-        currentMode = currentMode === '3D' ? '2D' : '3D';
+        // Determine the new currentMode based on the existing currentMode
+        let newCurrentModeValue;
+        if (currentMode === '3D') {
+            newCurrentModeValue = '2D';
+        } else if (currentMode === '2D') {
+            newCurrentModeValue = '2D_GRID';
+        } else { // currentMode was '2D_GRID' (or an unexpected state, defaulting to 3D)
+            newCurrentModeValue = '3D';
+        }
+        currentMode = newCurrentModeValue; // Update global currentMode
         
         // Log the state before clearing
         console.log('Before clearing - Scene children:', scene.children.length);
@@ -192,10 +210,10 @@ async function switchVisualizationMode() {
         // Log the state after clearing
         console.log('After clearing - Scene children:', scene.children.length);
         
-        is3D = currentMode === '3D';
+        is3D = currentMode === '3D'; // Update global is3D based on the *new* currentMode
         
         // Load new data
-        await loadVisualizationData(); // Calls updateLoadingProgress for JSON
+        await loadVisualizationData(); // This uses the updated currentMode
         console.log('Loaded image positions:', imagePositions.length);
         
         let accumulatedImageOffset = 0;
@@ -208,14 +226,15 @@ async function switchVisualizationMode() {
         // Log the final state
         console.log('After rendering - Scene children:', scene.children.length);
         
-        if (currentMode === '2D') {
-            camera.position.set(0, 0, 50);
-            controls.minPolarAngle = 0;
-            controls.maxPolarAngle = Math.PI / 2;
-        } else {
+        // Update camera and controls based on the new currentMode
+        if (currentMode === '3D') {
             camera.position.set(currentCameraPos.x, currentCameraPos.y, currentCameraPos.z);
             controls.minPolarAngle = 0;
             controls.maxPolarAngle = Math.PI;
+        } else { // Covers '2D' and '2D_GRID' modes
+            camera.position.set(0, 0, 50);
+            controls.minPolarAngle = 0; 
+            controls.maxPolarAngle = Math.PI / 2; // Using original 2D settings
         }
         
         camera.lookAt(0, 0, 0);
@@ -224,7 +243,16 @@ async function switchVisualizationMode() {
         
         const button = document.getElementById('toggle2D3DButton');
         if (button) {
-            button.textContent = `Switch to ${currentMode === '3D' ? '2D' : '3D'}`;
+            // Determine button text based on the *new* currentMode, showing the *next* mode on click
+            let buttonTextNextModeDisplay;
+            if (currentMode === '3D') {
+                buttonTextNextModeDisplay = '2D';
+            } else if (currentMode === '2D') {
+                buttonTextNextModeDisplay = '2D Grid'; // User-friendly name for the button
+            } else { // currentMode is '2D_GRID'
+                buttonTextNextModeDisplay = '3D';
+            }
+            button.textContent = `Switch to ${buttonTextNextModeDisplay}`;
         }
         
         needsUpdate = true;
@@ -270,10 +298,20 @@ async function createAndRenderPlanes(imageSrc, planesPerRow = montageTilesX, ima
         const y = row * chunkSize;
         
         const texture = getChunkedTexture(image, x, y);
+
+        let effectiveSpaceMultiplier;
+        if (currentMode === '2D_GRID') {
+            // For 2D_GRID: tile width is 2, no gap. Center-to-center = 2.0.
+            effectiveSpaceMultiplier = 2.0;
+        } else {
+            effectiveSpaceMultiplier = spaceBetweenTiles;
+        }
+
         const position = {
-            x: imagePositions[dataIndex].x * spaceBetweenTiles,
-            y: imagePositions[dataIndex].y * spaceBetweenTiles,
-            z: is3D ? imagePositions[dataIndex].z * spaceBetweenTiles : 0
+            x: imagePositions[dataIndex].x * effectiveSpaceMultiplier,
+            y: imagePositions[dataIndex].y * effectiveSpaceMultiplier,
+            // Z position is 0 for 2D/2D_GRID, or calculated for 3D
+            z: (currentMode === '3D') ? imagePositions[dataIndex].z * effectiveSpaceMultiplier : 0
         };
 
         createPlane(texture, position);
@@ -287,10 +325,19 @@ function updatePlanePositions() {
     scene.children.forEach((child, index) => {
         // Check if child is a mesh AND if imagePositions[index] exists
         if (child instanceof THREE.Mesh && imagePositions[index]) {
+            let effectiveSpaceMultiplier;
+            if (currentMode === '2D_GRID') {
+                // For 2D_GRID: tile width is 2, no gap. Center-to-center = 2.0.
+                effectiveSpaceMultiplier = 2.0;
+            } else {
+                effectiveSpaceMultiplier = spaceBetweenTiles;
+            }
+
             const position = {
-                x: imagePositions[index].x * spaceBetweenTiles * scalar_,
-                y: imagePositions[index].y * spaceBetweenTiles * scalar_,
-                z: is3D ? imagePositions[index].z * spaceBetweenTiles * scalar_ : 0
+                x: imagePositions[index].x * effectiveSpaceMultiplier * scalar_,
+                y: imagePositions[index].y * effectiveSpaceMultiplier * scalar_,
+                // Z position is 0 for 2D/2D_GRID, or calculated for 3D
+                z: (currentMode === '3D') ? imagePositions[index].z * effectiveSpaceMultiplier * scalar_ : 0
             };
             child.position.set(position.x, position.y, position.z);
         }
